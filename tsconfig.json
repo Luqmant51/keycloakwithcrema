@@ -23,8 +23,8 @@
       }
     ],
     "paths": {
-      "@crema/*": [
-        "./src/@crema/*"
+      "@devdocs/*": [
+        "./src/@devdocs/*"
       ]
     },
     "types": [

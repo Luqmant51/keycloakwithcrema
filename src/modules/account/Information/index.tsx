@@ -2,8 +2,8 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
 import * as yup from 'yup';
-import { Fonts } from '@crema/constants/AppEnums';
-import IntlMessages from '@crema/helpers/IntlMessages';
+import { Fonts } from '@devdocs/constants/AppEnums';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
 import InfoForm from './InfoForm';
 import { Formik } from 'formik';
 

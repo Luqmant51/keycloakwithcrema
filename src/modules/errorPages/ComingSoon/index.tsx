@@ -6,18 +6,18 @@ import * as yup from 'yup';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { grey } from '@mui/material/colors';
-import { Fonts } from '@crema/constants/AppEnums';
-import IntlMessages from '@crema/helpers/IntlMessages';
-import AppInfoView from '@crema/components/AppInfoView';
-import AppAnimate from '@crema/components/AppAnimate';
-import AppTextField from '@crema/components/AppFormComponents/AppTextField';
+import { Fonts } from '@devdocs/constants/AppEnums';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
+import AppInfoView from '@devdocs/components/AppInfoView';
+import AppAnimate from '@devdocs/components/AppAnimate';
+import AppTextField from '@devdocs/components/AppFormComponents/AppTextField';
 
 import { styled } from '@mui/material/styles';
 import Logo from '../../../assets/icon/comingsoon.png';
 import Image from 'next/image';
 import { useTheme } from '@mui/material';
 import { useIntl } from 'react-intl';
-import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { useInfoViewActionsContext } from '@devdocs/context/AppContextProvider/InfoViewContextProvider';
 
 const FormWrapper = styled(Form)(() => {
   return {

@@ -1,9 +1,9 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { Button } from '@mui/material';
-import IntlMessages from '@crema/helpers/IntlMessages';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
 import Activity from './Activity';
-import { accountData } from '@crema/fakedb';
+import { accountData } from '@devdocs/fakedb';
 import Application from './Application';
 
 const Notification = () => {

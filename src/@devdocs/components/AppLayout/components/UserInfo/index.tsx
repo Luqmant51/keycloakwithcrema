@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuthMethod, useAuthUser } from '@devdocs/hooks/AuthHooks';
+import { useAuthMethod, useAuthUserKeyCloack } from '@devdocs/hooks/AuthHooks';
 import { Box } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
@@ -16,7 +16,7 @@ type UserInfoProps = {
 
 const UserInfo: React.FC<UserInfoProps> = ({ color = 'text.secondary' }) => {
   const { logout } = useAuthMethod();
-  const { user } = useAuthUser();
+  const { user } = useAuthUserKeyCloack();
   const router = useRouter();
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);

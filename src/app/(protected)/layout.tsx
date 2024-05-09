@@ -1,15 +1,15 @@
 'use client';
 import React, { useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useAuthUser } from '../../@crema/hooks/AuthHooks';
-import AppLoader from '@crema/components/AppLoader';
-import routesConfig from '@crema/core/AppRoutes/routeConfig';
-import { Layouts } from '@crema/components/AppLayout';
-import { useSidebarActionsContext } from '@crema/context/AppContextProvider/SidebarContextProvider';
+import { useAuthUserKeyCloack } from '../../@devdocs/hooks/AuthHooks';
+import AppLoader from '@devdocs/components/AppLoader';
+import routesConfig from '@devdocs/core/AppRoutes/routeConfig';
+import { Layouts } from '@devdocs/components/AppLayout';
+import { useSidebarActionsContext } from '@devdocs/context/AppContextProvider/SidebarContextProvider';
 import {
   useLayoutActionsContext,
   useLayoutContext,
-} from '@crema/context/AppContextProvider/LayoutContextProvider';
+} from '@devdocs/context/AppContextProvider/LayoutContextProvider';
 
 export default function RootLayout({ children }: any) {
   const { navStyle } = useLayoutContext();
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: any) {
   const { updateMenuStyle, setSidebarBgImage } = useSidebarActionsContext();
   const searchParams = useSearchParams();
 
-  const { user, isLoading } = useAuthUser();
+  const { user, isLoading } = useAuthUserKeyCloack();
   const router = useRouter();
   const layout = searchParams.get('layout');
   const menuStyle = searchParams.get('menuStyle');

@@ -11,6 +11,14 @@ const nextConfig = {
         NEXT_PUBLIC_THEME_MODE: "light",
         NEXT_PUBLIC_NAV_STYLE: "default",
         NEXT_PUBLIC_LAYOUT_TYPE: "full-width",
+        KEYCLOAK_CLIENT_ID: "nextjs",
+        KEYCLOAK_CLIENT_SECRET: "VT60v6iBsbmDn7JTcYee4Hzr15edXcrL",
+        KEYCLOAK_ISSUER: "https://identity.teamfullstack.io/realms/luqman",
+        NEXTAUTH_URL: "http://localhost:3000",
+        NEXTAUTH_SECRET: "Je4xGnG76YxQEo6TUmZ18Nkrx3QL0N3vcQhgPghsvdU:",
+        KEYCLOAK_REALM: "luqman",
+        REFRESH_TOKEN_URL: "https://identity.teamfullstack.io/realms/luqman/protocol/openid-connect/token",
+        END_SESSION_URL: "https://identity.teamfullstack.io/realms/luqman/protocol/openid-connect/logout",
     },
 }
 

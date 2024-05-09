@@ -4,13 +4,13 @@ import { Checkbox } from "@mui/material";
 import { Form, Formik } from "formik";
 import * as yup from "yup";
 
-import AppInfoView from "@crema/components/AppInfoView";
+import AppInfoView from "@devdocs/components/AppInfoView";
 import Box from "@mui/material/Box";
-import IntlMessages from "@crema/helpers/IntlMessages";
-import AppTextField from "@crema/components/AppFormComponents/AppTextField";
-import { Fonts } from "@crema/constants/AppEnums";
+import IntlMessages from "@devdocs/helpers/IntlMessages";
+import AppTextField from "@devdocs/components/AppFormComponents/AppTextField";
+import { Fonts } from "@devdocs/constants/AppEnums";
 import Link from "next/link";
-import { useJWTAuthActions } from "@crema/services/auth/jwt-auth/JWTAuthProvider";
+import { useJWTAuthActions } from "@devdocs/services/auth/jwt-auth/JWTAuthProvider";
 import { useIntl } from "react-intl";
 
 const SignupJwtAuth = () => {

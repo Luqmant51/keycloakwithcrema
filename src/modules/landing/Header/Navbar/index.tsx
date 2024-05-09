@@ -1,14 +1,15 @@
-'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Link from 'next/link';
 import Image from 'next/image';
 import './index.css';
 import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
-import { useAuthUser } from '@crema/hooks/AuthHooks';
-import { initialUrl } from '@crema/constants/AppConst';
+import { useAuthUserKeyCloack } from '@devdocs/hooks/AuthHooks';
+import { initialUrl } from '@devdocs/constants/AppConst';
+import { signIn } from 'next-auth/react';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
+
 const menuItems = [
   {
     name: 'Community',
@@ -23,21 +24,25 @@ const menuItems = [
     link: '/',
   },
 ];
+
 const NavBar = () => {
   const [isScroll, setScroll] = useState(false);
   const [open, setOpen] = useState(false);
-  const { isAuthenticated } = useAuthUser();
-  window.onscroll = function () {
-    myFunction();
-  };
+  const { isAuthenticated } = useAuthUserKeyCloack();
 
-  const myFunction = () => {
-    if (window.pageYOffset > 10 && isScroll === false) {
-      setScroll(true);
-    } else if (window.pageYOffset <= 10 && isScroll === true) {
-      setScroll(false);
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10 && !isScroll) {
+        setScroll(true);
+      } else if (window.scrollY <= 10 && isScroll) {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isScroll]);
+
   const showDrawer = () => {
     setOpen(true);
   };
@@ -51,9 +56,9 @@ const NavBar = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          fontSize: ' 16px',
-          maxWidth: ' 1370px',
-          margin: ' 0 auto',
+          fontSize: '16px',
+          maxWidth: '1370px',
+          margin: '0 auto',
           width: '100%',
           zIndex: 1250,
           padding: isScroll ? 0 : '30px 0 16px',
@@ -61,41 +66,39 @@ const NavBar = () => {
       >
         <Box>
           <Image
-            src={`${
-              isScroll
-                ? '/assets/images/logo-with-name.png'
-                : '/assets/images/logo-white-with-name.png'
-            }`}
+            src={`${isScroll ? '/assets/images/logo-with-name.png' : '/assets/images/logo-white-with-name.png'}`}
             alt='logo'
             width={130}
             height={42}
           />
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
-          {menuItems.map((items) => (
+          {menuItems.map((item) => (
             <Link
               rel='stylesheet'
-              href={items.link}
-              key={items.name}
+              href={item.link}
+              key={item.name}
               className={isScroll ? 'text_color' : 'nav_link'}
             >
-              {items.name}
+              {item.name}
             </Link>
           ))}
           <Button
             variant='contained'
-            href={isAuthenticated ? initialUrl : '/signin'}
+            href={isAuthenticated ? initialUrl : ''}
             sx={{
               backgroundColor: isScroll ? '' : 'red',
             }}
+            onClick={() => signIn("keycloak")}
           >
             {isAuthenticated ? 'Go to Dashboard' : 'Sign In'}
           </Button>
           <span
             style={{ fontSize: '32px', color: isScroll ? '#000' : '#fff' }}
             className='menu_icon'
+            onClick={showDrawer}
           >
-            <MenuSharpIcon onClick={showDrawer} />
+            <MenuSharpIcon />
           </span>
         </Box>
       </Box>
@@ -109,17 +112,16 @@ const NavBar = () => {
         <Box
           sx={{
             display: 'flex',
-            alignItems: 'left',
-            gap: '50px',
             flexDirection: 'column',
-            padding: ' 60px',
+            gap: '50px',
+            padding: '60px',
           }}
         >
-          {menuItems.map((items) => (
+          {menuItems.map((item) => (
             <Link
               rel='stylesheet'
-              href={items.link}
-              key={items.name}
+              href={item.link}
+              key={item.name}
               onClick={onClose}
               style={{
                 fontSize: '24px',
@@ -128,7 +130,7 @@ const NavBar = () => {
                 textDecoration: 'none',
               }}
             >
-              {items.name}
+              {item.name}
             </Link>
           ))}
         </Box>

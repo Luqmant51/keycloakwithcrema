@@ -6,19 +6,19 @@ import * as yup from 'yup';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useIntl } from 'react-intl';
-import AppTextField from '@crema/components/AppFormComponents/AppTextField';
-import IntlMessages from '@crema/helpers/IntlMessages';
+import AppTextField from '@devdocs/components/AppFormComponents/AppTextField';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import AppInfoView from '@crema/components/AppInfoView';
+import AppInfoView from '@devdocs/components/AppInfoView';
 import Auth, { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth';
 import {
   useAwsCognito,
   useAwsCognitoActions,
-} from '@crema/services/auth/aws-cognito/AWSAuthProvider';
-import { Fonts } from '@crema/constants/AppEnums';
+} from '@devdocs/services/auth/aws-cognito/AWSAuthProvider';
+import { Fonts } from '@devdocs/constants/AppEnums';
 import { AiOutlineGoogle } from 'react-icons/ai';
 import { FaFacebookF } from 'react-icons/fa';
 

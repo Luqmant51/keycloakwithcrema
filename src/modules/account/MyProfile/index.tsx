@@ -3,15 +3,15 @@ import React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/helpers/IntlMessages';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
 import { BiUser } from 'react-icons/bi';
 import { AiOutlineLock } from 'react-icons/ai';
 import { IoMdInformationCircleOutline } from 'react-icons/io';
 import { IoShareSocialOutline } from 'react-icons/io5';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 
-import AppAnimate from '@crema/components/AppAnimate';
-import { Fonts } from '@crema/constants/AppEnums';
+import AppAnimate from '@devdocs/components/AppAnimate';
+import { Fonts } from '@devdocs/constants/AppEnums';
 
 import AccountTabsWrapper from '../AccountTabsWrapper';
 import PersonalInfo from '../PersonalInfo';
@@ -19,7 +19,7 @@ import ChangePassword from '../ChangePassword';
 import Information from '../Information';
 import Social from '../Social';
 import Notification from '../Notification';
-import { accountData } from '@crema/fakedb';
+import { accountData } from '@devdocs/fakedb';
 
 function a11yProps(index: number) {
   return {

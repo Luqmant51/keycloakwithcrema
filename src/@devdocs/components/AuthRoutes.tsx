@@ -1,13 +1,17 @@
-import React, {ReactNode} from 'react';
+import React, { ReactNode } from 'react';
 import AppLoader from './AppLoader';
-import {useAuthUser} from '@devdocs/hooks/AuthHooks';
+import { useAuthUserKeyCloack } from '@devdocs/hooks/AuthHooks';
 
-type AuthRoutesProps= {
+type AuthRoutesProps = {
   children: ReactNode;
 }
 
 const AuthRoutes: React.FC<AuthRoutesProps> = ({ children }) => {
-  const { isLoading } = useAuthUser();
+  const { isLoading } = useAuthUserKeyCloack();
+  console.log("isLoading");
+  console.log(isLoading);
+  
+
   return isLoading ? <AppLoader /> : <>{children}</>;
 };
 

@@ -1,10 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-import AppCard from '@crema/components/AppCard';
+import AppCard from '@devdocs/components/AppCard';
 import { alpha, Avatar, Box, Theme, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
-import { Fonts } from '@crema/constants/AppEnums';
-import { MemberDataType } from '@crema/types/models/account';
+import { Fonts } from '@devdocs/constants/AppEnums';
+import { MemberDataType } from '@devdocs/types/models/account';
 
 type MemberProps = {
   member: MemberDataType;

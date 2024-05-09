@@ -1,6 +1,6 @@
 import React from "react";
 import { useInfoViewActionsContext } from "@devdocs/context/AppContextProvider/InfoViewContextProvider";
-import FirebaseAuthProvider from "@devdocs/services/auth/firebase/FirebaseAuthProvider";
+import KeycloakAuthProvider from "@devdocs/services/auth/keycloack/KeycloakAuthProvider";
 
 type Props = {
   children: React.ReactNode;
@@ -9,13 +9,13 @@ const AppAuthProvider = ({ children }: Props) => {
   const { fetchStart, fetchSuccess, fetchError } = useInfoViewActionsContext();
 
   return (
-    <FirebaseAuthProvider
+    <KeycloakAuthProvider
       fetchStart={fetchStart}
       fetchError={fetchError}
       fetchSuccess={fetchSuccess}
     >
       {children}
-    </FirebaseAuthProvider>
+    </KeycloakAuthProvider>
   );
 };
 

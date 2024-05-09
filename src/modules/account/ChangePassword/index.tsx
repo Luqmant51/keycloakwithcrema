@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import IntlMessages from '@crema/helpers/IntlMessages';
-import { Fonts } from '@crema/constants/AppEnums';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
+import { Fonts } from '@devdocs/constants/AppEnums';
 import ChangePasswordForm from './ChangePasswordForm';
 import { Formik } from 'formik';
 import * as yup from 'yup';

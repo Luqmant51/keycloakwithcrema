@@ -2,16 +2,16 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useIntl } from 'react-intl';
-import { Fonts } from '@crema/constants/AppEnums';
+import { Fonts } from '@devdocs/constants/AppEnums';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import IntlMessages from '@crema/helpers/IntlMessages';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
 import Button from '@mui/material/Button';
-import AppInfoView from '@crema/components/AppInfoView';
+import AppInfoView from '@devdocs/components/AppInfoView';
 import ReactCodeInput from 'react-code-input';
-import { useAwsCognitoActions } from '@crema/services/auth/aws-cognito/AWSAuthProvider';
-import AppLogo from '@crema/components/AppLayout/components/AppLogo';
-import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import { useAwsCognitoActions } from '@devdocs/services/auth/aws-cognito/AWSAuthProvider';
+import AppLogo from '@devdocs/components/AppLayout/components/AppLogo';
+import { useInfoViewActionsContext } from '@devdocs/context/AppContextProvider/InfoViewContextProvider';
 
 const ConfirmSignupAwsCognito = (props: any) => {
   const infoViewActionsContext = useInfoViewActionsContext();

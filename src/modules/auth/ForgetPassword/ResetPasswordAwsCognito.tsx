@@ -4,15 +4,15 @@ import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 import ReactCodeInput from 'react-code-input';
 import { useIntl } from 'react-intl';
-import { Fonts } from '@crema/constants/AppEnums';
-import AppTextField from '@crema/components/AppFormComponents/AppTextField';
-import IntlMessages from '@crema/helpers/IntlMessages';
+import { Fonts } from '@devdocs/constants/AppEnums';
+import AppTextField from '@devdocs/components/AppFormComponents/AppTextField';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import AppInfoView from '@crema/components/AppInfoView';
-import AppLogo from '@crema/components/AppLayout/components/AppLogo';
-import { useInfoViewActionsContext } from '@crema/context/AppContextProvider/InfoViewContextProvider';
+import AppInfoView from '@devdocs/components/AppInfoView';
+import AppLogo from '@devdocs/components/AppLayout/components/AppLogo';
+import { useInfoViewActionsContext } from '@devdocs/context/AppContextProvider/InfoViewContextProvider';
 
 const ResetPasswordAwsCognito = () => {
   const infoViewActionsContext = useInfoViewActionsContext();

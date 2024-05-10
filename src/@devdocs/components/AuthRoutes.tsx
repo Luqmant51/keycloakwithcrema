@@ -8,10 +8,6 @@ type AuthRoutesProps = {
 
 const AuthRoutes: React.FC<AuthRoutesProps> = ({ children }) => {
   const { isLoading } = useAuthUserKeyCloack();
-  console.log("isLoading");
-  console.log(isLoading);
-  
-
   return isLoading ? <AppLoader /> : <>{children}</>;
 };
 

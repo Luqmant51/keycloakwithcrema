@@ -21,10 +21,10 @@ export default function RootLayout({ children }: any) {
 
   const { user, isLoading } = useAuthUserKeyCloack();
   const router = useRouter();
-  const layout = searchParams.get('layout');
-  const menuStyle = searchParams.get('menuStyle');
-  const sidebarImage = searchParams.get('sidebarImage');
-  const queryParams = searchParams.toString();
+  const layout = searchParams?.get('layout');
+  const menuStyle = searchParams?.get('menuStyle');
+  const sidebarImage = searchParams?.get('sidebarImage');
+  const queryParams = searchParams?.toString();
 
   useEffect(() => {
     if (!user && !isLoading) {

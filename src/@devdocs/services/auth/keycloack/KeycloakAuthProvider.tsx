@@ -26,6 +26,7 @@ interface AuthProviderProps {
   fetchStart: () => void;
   fetchSuccess: () => void;
   fetchError: (error: string) => void;
+  session: any
 }
 
 const AuthProvider: React.FC<AuthProviderProps> = ({
@@ -33,29 +34,30 @@ const AuthProvider: React.FC<AuthProviderProps> = ({
   fetchStart,
   fetchSuccess,
   fetchError,
+  session
 }) => {
   const [authData, setAuthData] = useState<AuthContextProps>({
     user: null,
     isAuthenticated: false,
-    isLoading: true,
+    isLoading: false,
   });
 
   useEffect(() => {
     console.log("AuthProvider in use effect");
-  
+
     const fetchSession = async () => {
-      console.log("fetchSession in use effect");
+      console.log("fetchSession in use effect", session && session.user);
       fetchStart();
       try {
-        const response = await fetch('/api/session');
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            const session = await response.json();
-  
-        if (session?.user) {
+        // const response = await fetch('/api/session');
+        // if (!response.ok) {
+        //   throw new Error(`HTTP error! Status: ${response.status}`);
+        // }
+        // const session = await response.json();
+
+        if (session && session?.user) {
           console.log("in if");
-  
+
           setAuthData({
             user: session.user,
             isAuthenticated: true,
@@ -72,10 +74,10 @@ const AuthProvider: React.FC<AuthProviderProps> = ({
         });
       }
     };
-  
+
     fetchSession();
-  }, []);
-  
+  }, [session]);
+
 
   return (
     <AuthContext.Provider value={authData}>

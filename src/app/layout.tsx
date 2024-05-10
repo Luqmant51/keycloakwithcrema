@@ -12,6 +12,7 @@ import AuthRoutes from '@devdocs/components/AuthRoutes';
 import AppPageMeta from '@devdocs/components/AppPageMeta';
 import InfoViewContextProvider from '@devdocs/context/AppContextProvider/InfoViewContextProvider';
 import AppAuthProvider from '@devdocs/core/AppAuthProvider';
+import SessionProviderWrapper from "@/utils/sessionProviderWrapper";
 
 import '../../public/styles/vendors/index.css';
 
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: Props) {
       </head>
       <body>
         <CacheProvider value={clientSideEmotionCache}>
+          <SessionProviderWrapper>
           <AppContextProvider>
             <AppThemeProvider>
               <AppStyleProvider>
@@ -56,6 +58,7 @@ export default function RootLayout({ children }: Props) {
               </AppStyleProvider>
             </AppThemeProvider>
           </AppContextProvider>
+          </SessionProviderWrapper>
         </CacheProvider>
       </body>
     </html>

@@ -1,30 +1,3 @@
-/*// ForJWT Auth
-import { getUserFromJwtAuth } from '@devdocs/helpers/AuthHelper';
-import {
-  useJWTAuth,
-  useJWTAuthActions,
-} from '@devdocs/services/auth/JWTAuthProvider';
-
-export const useAuthUser = () => {
-  const {user, isAuthenticated, isLoading} = useJWTAuth();
-  return {
-    isLoading,
-    isAuthenticated,
-    user: getUserFromJwtAuth(user),
-  };
-};
-
-export const useAuthMethod = () => {
-  const {signInUser, signUpUser, logout} = useJWTAuthActions();
-
-  return {
-    signInUser,
-    logout,
-    signUpUser,
-  };
-};*/
-//For Firebase Auth
-
 import {
   useFirebase,
   useFirebaseActions,

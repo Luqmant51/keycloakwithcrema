@@ -9,6 +9,7 @@ import { Fonts } from '@devdocs/constants/AppEnums';
 import { useRouter } from 'next/navigation';
 import { orange } from '@mui/material/colors';
 import AppLoader from '../../../AppLoader';
+import { signOut } from 'next-auth/react';
 
 type UserInfoProps = {
   color?: string;
@@ -41,6 +42,18 @@ const UserInfo: React.FC<UserInfoProps> = ({ color = 'text.secondary' }) => {
   if (!user || !user.email) {
     return <AppLoader />;
   }
+
+  async function keyCloakLogout() {
+    try {
+      await fetch("/api/auth/logout", { method: "GET" })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const handleLogout = async () => {
+    keyCloakLogout().then(() => signOut({ callbackUrl: "/" }));
+  };
 
   return (
     <>
@@ -153,7 +166,7 @@ const UserInfo: React.FC<UserInfoProps> = ({ color = 'text.secondary' }) => {
         >
           My account
         </MenuItem>
-        <MenuItem onClick={logout}>Logout</MenuItem>
+        <MenuItem onClick={handleLogout}>hello</MenuItem>
       </Menu>
     </>
   );

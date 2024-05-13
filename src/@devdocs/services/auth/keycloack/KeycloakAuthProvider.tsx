@@ -43,10 +43,7 @@ const AuthProvider: React.FC<AuthProviderProps> = ({
   });
 
   useEffect(() => {
-    console.log("AuthProvider in use effect");
-
     const fetchSession = async () => {
-      console.log("fetchSession in use effect", session && session.user);
       fetchStart();
       try {
         // const response = await fetch('/api/session');
@@ -56,8 +53,6 @@ const AuthProvider: React.FC<AuthProviderProps> = ({
         // const session = await response.json();
 
         if (session && session?.user) {
-          console.log("in if");
-
           setAuthData({
             user: session.user,
             isAuthenticated: true,

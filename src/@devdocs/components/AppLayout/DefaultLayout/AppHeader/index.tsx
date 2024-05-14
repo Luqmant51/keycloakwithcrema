@@ -1,13 +1,13 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import AppLngSwitcher from '../../../AppLngSwitcher';
+// import AppLngSwitcher from '../../../AppLngSwitcher';
 import Box from '@mui/material/Box';
 import AppSearchBar from '../../../AppSearchBar';
 import Hidden from '@mui/material/Hidden';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import AppMessages from '../../../AppMessages';
+// import AppMessages from '../../../AppMessages';
 import AppNotifications from '../../../AppNotifications';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -79,7 +79,7 @@ const AppHeader: React.FC<Props> = ({ toggleNavCollapsed }) => {
             flexGrow: 1,
           }}
         />
-        <AppLngSwitcher iconOnly={true} tooltipPosition="bottom" />
+        {/* <AppLngSwitcher iconOnly={true} tooltipPosition="bottom" /> */}
 
         <Box sx={{ ml: 4 }}>
           <Hidden smDown>
@@ -104,7 +104,7 @@ const AppHeader: React.FC<Props> = ({ toggleNavCollapsed }) => {
                   px: 1.85,
                 }}
               >
-                <AppMessages />
+                {/* <AppMessages /> */}
               </Box>
             </Box>
           </Hidden>
@@ -159,12 +159,12 @@ const AppHeader: React.FC<Props> = ({ toggleNavCollapsed }) => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem>
+            {/* <MenuItem>
               <AppNotifications isMenu />
             </MenuItem>
             <MenuItem>
               <AppMessages isMenu />
-            </MenuItem>
+            </MenuItem> */}
             <MenuItem>Setting</MenuItem>
           </Menu>
         </Box>

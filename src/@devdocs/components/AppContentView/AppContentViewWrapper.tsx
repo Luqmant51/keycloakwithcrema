@@ -11,15 +11,15 @@ const AppContentViewWrapper: React.FC<AppContentViewWrapperProps> = ({
 }) => {
   return (
     <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        flex: 1,
-        maxWidth: { xl: 1650 },
-        mx: { xl: "auto" },
-        width: { xl: "100%" },
-      }}
-      {...rest}
+      // sx={{
+      //   display: "flex",
+      //   flexDirection: "column",
+      //   flex: 1,
+      //   maxWidth: { xl: 1650 },
+      //   mx: { xl: "auto" },
+      //   width: { xl: "100%" },
+      // }}
+      // {...rest}
     >
       {children}
     </Box>

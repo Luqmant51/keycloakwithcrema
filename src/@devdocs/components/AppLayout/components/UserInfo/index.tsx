@@ -166,7 +166,7 @@ const UserInfo: React.FC<UserInfoProps> = ({ color = 'text.secondary' }) => {
         >
           My account
         </MenuItem>
-        <MenuItem onClick={handleLogout}>hello</MenuItem>
+        <MenuItem onClick={handleLogout}>Logout</MenuItem>
       </Menu>
     </>
   );

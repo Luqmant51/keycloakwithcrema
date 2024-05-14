@@ -3,7 +3,7 @@ import {NextSeo} from 'next-seo';
 
 const SITE_URL =
   process.env.NODE_ENV === 'development'
-    ? 'http://localhost:3000'
+    ? 'http://localhost:4000'
     : 'https://cra.cremawork.com';
 
 const defaultTitle = 'Crema- React Material Admin Template';

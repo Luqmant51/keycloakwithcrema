@@ -3,15 +3,16 @@ import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import createEmotionCache from './createEmotionCache';
-import AppContextProvider from '@crema/context/AppContextProvider';
-import AppThemeProvider from '@crema/context/AppThemeProvider';
-import AppStyleProvider from '@crema/context/AppStyleProvider';
-import AppLocaleProvider from '@crema/context/AppLocaleProvider';
+import AppContextProvider from '@devdocs/context/AppContextProvider';
+import AppThemeProvider from '@devdocs/context/AppThemeProvider';
+import AppStyleProvider from '@devdocs/context/AppStyleProvider';
+import AppLocaleProvider from '@devdocs/context/AppLocaleProvider';
 
-import AuthRoutes from '@crema/components/AuthRoutes';
-import AppPageMeta from '@crema/components/AppPageMeta';
-import InfoViewContextProvider from '@crema/context/AppContextProvider/InfoViewContextProvider';
-import AppAuthProvider from '@crema/core/AppAuthProvider';
+import AuthRoutes from '@devdocs/components/AuthRoutes';
+import AppPageMeta from '@devdocs/components/AppPageMeta';
+import InfoViewContextProvider from '@devdocs/context/AppContextProvider/InfoViewContextProvider';
+import AppAuthProvider from '@devdocs/core/AppAuthProvider';
+import SessionProviderWrapper from "@/utils/sessionProviderWrapper";
 
 import '../../public/styles/vendors/index.css';
 
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: Props) {
       </head>
       <body>
         <CacheProvider value={clientSideEmotionCache}>
+          <SessionProviderWrapper>
           <AppContextProvider>
             <AppThemeProvider>
               <AppStyleProvider>
@@ -56,6 +58,7 @@ export default function RootLayout({ children }: Props) {
               </AppStyleProvider>
             </AppThemeProvider>
           </AppContextProvider>
+          </SessionProviderWrapper>
         </CacheProvider>
       </body>
     </html>

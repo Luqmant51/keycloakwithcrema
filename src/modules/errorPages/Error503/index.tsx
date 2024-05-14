@@ -5,10 +5,10 @@ import { useRouter } from 'next/navigation';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { grey } from '@mui/material/colors';
-import { Fonts } from '@crema/constants/AppEnums';
-import { initialUrl } from '@crema/constants/AppConst';
-import AppAnimate from '@crema/components/AppAnimate';
-import IntlMessages from '@crema/helpers/IntlMessages';
+import { Fonts } from '@devdocs/constants/AppEnums';
+import { initialUrl } from '@devdocs/constants/AppConst';
+import AppAnimate from '@devdocs/components/AppAnimate';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
 import Logo from '../../../assets/icon/503.png';
 import Image from 'next/image';
 

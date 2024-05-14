@@ -2,8 +2,8 @@ import React from "react";
 import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
-import { Fonts } from "@crema/constants/AppEnums";
-import AppLogo from "@crema/components/AppLayout/components/AppLogo";
+import { Fonts } from "@devdocs/constants/AppEnums";
+import AppLogo from "@devdocs/components/AppLayout/components/AppLogo";
 
 type AuthWrapperProps = {
   children: any;

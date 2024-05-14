@@ -1,13 +1,13 @@
 import React from "react";
 import { Box, Button } from "@mui/material";
-import AppGridContainer from "@crema/components/AppGridContainer";
+import AppGridContainer from "@devdocs/components/AppGridContainer";
 import Grid from "@mui/material/Grid";
-import IntlMessages from "@crema/helpers/IntlMessages";
+import IntlMessages from "@devdocs/helpers/IntlMessages";
 import InputAdornment from "@mui/material/InputAdornment";
 import IconButton from "@mui/material/IconButton";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { Form } from "formik";
-import AppTextField from "@crema/components/AppFormComponents/AppTextField";
+import AppTextField from "@devdocs/components/AppFormComponents/AppTextField";
 
 const ChangePasswordForm = () => {
   const [showPassword, setShowPassword] = React.useState(false);

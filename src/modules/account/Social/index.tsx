@@ -1,12 +1,12 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
-import { Fonts } from '@crema/constants/AppEnums';
-import IntlMessages from '@crema/helpers/IntlMessages';
+import { Fonts } from '@devdocs/constants/AppEnums';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
 import { Formik } from 'formik';
 import SocialForm from './SocialForm';
 import * as yup from 'yup';
-import { MemberDataType } from '@crema/types/models/account';
+import { MemberDataType } from '@devdocs/types/models/account';
 
 const validationSchema = yup.object({
   twitter: yup.string().label('Please Enter your Twitter url'),

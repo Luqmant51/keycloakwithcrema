@@ -2,19 +2,19 @@
 import React from "react";
 import { Form, Formik } from "formik";
 import * as yup from "yup";
-import AppTextField from "@crema/components/AppFormComponents/AppTextField";
-import IntlMessages from "@crema/helpers/IntlMessages";
+import AppTextField from "@devdocs/components/AppFormComponents/AppTextField";
+import IntlMessages from "@devdocs/helpers/IntlMessages";
 import Box from "@mui/material/Box";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import AppInfoView from "@crema/components/AppInfoView";
+import AppInfoView from "@devdocs/components/AppInfoView";
 import Auth, { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth";
-import { Fonts } from "@crema/constants/AppEnums";
+import { Fonts } from "@devdocs/constants/AppEnums";
 import Link from "next/link";
 import { FaFacebookF } from "react-icons/fa";
 import { AiOutlineGoogle } from "react-icons/ai";
-import { useAwsCognitoActions } from "@crema/services/auth/aws-cognito/AWSAuthProvider";
+import { useAwsCognitoActions } from "@devdocs/services/auth/aws-cognito/AWSAuthProvider";
 import { useIntl } from "react-intl";
 
 const SignupAwsCognito = () => {

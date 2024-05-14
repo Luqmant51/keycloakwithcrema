@@ -4,15 +4,15 @@ import { Checkbox } from '@mui/material';
 import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 
-import AppInfoView from '@crema/components/AppInfoView';
+import AppInfoView from '@devdocs/components/AppInfoView';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Box from '@mui/material/Box';
-import IntlMessages from '@crema/helpers/IntlMessages';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
 import { useIntl } from 'react-intl';
-import AppTextField from '@crema/components/AppFormComponents/AppTextField';
-import { useJWTAuthActions } from '@crema/services/auth/jwt-auth/JWTAuthProvider';
-import { Fonts } from '@crema/constants/AppEnums';
+import AppTextField from '@devdocs/components/AppFormComponents/AppTextField';
+import { useJWTAuthActions } from '@devdocs/services/auth/jwt-auth/JWTAuthProvider';
+import { Fonts } from '@devdocs/constants/AppEnums';
 
 const SigninJwtAuth = () => {
   const router = useRouter();

@@ -17,43 +17,6 @@ const meta: Meta<typeof DevButton> = {
 };
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
-
-// export const Primary: Story = {
-//   args: {
-//     variant: 'contained',
-//     color: 'primary',
-//     size: 'medium',
-//     label: 'Primary DevButton',
-//   },
-// };
-
-// export const Secondary: Story = {
-//   args: {
-//     variant: 'outlined',
-//     color: 'secondary',
-//     size: 'medium',
-//     label: 'Secondary DevButton',
-//   },
-// };
-
-// export const Large: Story = {
-//   args: {
-//     variant: 'contained',
-//     color: 'primary',
-//     size: 'large',
-//     label: 'Large DevButton',
-//   },
-// };
-
-// export const Small: Story = {
-//   args: {
-//     variant: 'contained',
-//     color: 'primary',
-//     size: 'small',
-//     label: 'Small DevButton',
-//   },
-// };
 
 export const AllButtonsSmall: StoryObj<typeof DevButton> = {
   render: (args) => {

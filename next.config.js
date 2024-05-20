@@ -2,7 +2,7 @@
 const nextConfig = {
     env: {
         // NEXT_PUBLIC_INITIAL_URL: "/sample/page-1",
-        NEXT_PUBLIC_INITIAL_URL: "/welcome",
+        NEXT_PUBLIC_INITIAL_URL: "/workspace",
         NEXT_PUBLIC_STATE_TYPE: "context",
         NEXT_PUBLIC_FILESTACK_KEY: "Ach6MsgoQHGK6tCaq5uJgz",
         NEXT_PUBLIC_LAYOUT: "default",

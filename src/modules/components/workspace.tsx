@@ -1,7 +1,6 @@
 "use client"
 import React from 'react';
 import { Card, CardContent, Typography, Link, Grid, Button } from '@mui/material';
-import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 
 const WorkspaceCard = ({ type, data }: { type: string, data?: any }) => {

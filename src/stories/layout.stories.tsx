@@ -1,12 +1,15 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Button } from './Button';
 import { fn } from '@storybook/test';
 import PrimaryAppBar from '@/@devdocs/components/AppLayout/DefaultLayout/AppHeaderCustom';
 
-const meta: Meta<typeof Button> = {
-    title: 'Example/PrimaryAppBarStory',
+const meta: Meta<typeof PrimaryAppBar> = {
+    title: 'Components/PrimaryAppBarStory',
     component: PrimaryAppBar,
+    // parameters: {
+    //     layout: 'centered',
+    // },
+    tags: ['autodocs'],
     args: { onClick: fn() },
 };
 
@@ -26,3 +29,10 @@ export const PrimaryAppBarStoryOpenMenu: StoryObj<typeof PrimaryAppBar> = {
         </div>
     ),
 };
+
+
+
+
+const data = () => {
+    return <></>
+}

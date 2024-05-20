@@ -16,10 +16,10 @@ export default function RootLayout({ children }: any) {
   const searchParams = useSearchParams();
   // const { user, isLoading } = useAuthUser();
   const { user, isLoading } = useAuthUserKeyCloack();
-  const layout = searchParams.get('layout');
-  const menuStyle = searchParams.get('menuStyle');
-  const sidebarImage = searchParams.get('sidebarImage');
-  const queryParams = searchParams.toString();
+  const layout = searchParams?.get('layout');
+  const menuStyle = searchParams?.get('menuStyle');
+  const sidebarImage = searchParams?.get('sidebarImage');
+  const queryParams = searchParams?.toString();
   const router = useRouter();
 
   useEffect(() => {

@@ -11,7 +11,7 @@ import PrimaryAppBar from './AppHeaderCustom';
 
 type Props = {
   children: ReactNode;
-  routesConfig: RouterConfigData[];
+  routesConfig?: RouterConfigData[];
 };
 
 const DefaultLayout: React.FC<Props> = ({ children, routesConfig }) => {

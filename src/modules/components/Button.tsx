@@ -13,7 +13,7 @@ interface ButtonProps {
 
 export const DevButton: React.FC<ButtonProps> = ({ variant = 'contained', color = 'primary', size = 'medium', label, onClick, ...props }) => {
   return (
-    <MuiButton style={{ margin: "10px" }} variant={variant} color={color} size={size} onClick={onClick} {...props}>
+    <MuiButton style={{ margin: '10px' }} variant={variant} color={color} size={size} onClick={onClick} {...props}>
       {label}
     </MuiButton>
   );

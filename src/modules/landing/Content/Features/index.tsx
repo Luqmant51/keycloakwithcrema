@@ -61,7 +61,7 @@ const Features = () => {
             <Box
               sx={{
                 // color: '#757575',
-                background: `url(/assets/images/features/bg.svg) no-repeat bottom center  `,
+                background: 'url(/assets/images/features/bg.svg) no-repeat bottom center  ',
                 // backgroundSize: '100% 100%',
                 display: 'flex',
                 alignItems: 'center',

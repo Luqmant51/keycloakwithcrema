@@ -8,7 +8,7 @@ const Header = () => {
     <Box
       id='header'
       sx={{
-        background: `url(/assets/images/banner/header-background.png)`,
+        background: 'url(/assets/images/banner/header-background.png)',
       }}
     >
       <NavBar />

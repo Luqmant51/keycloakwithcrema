@@ -1,9 +1,9 @@
-import React, { CSSProperties, ReactNode, useEffect, useState } from "react";
-import { useBottomScrollListener } from "react-bottom-scroll-listener";
-import { Box, Theme, useTheme } from "@mui/material";
-import AppAnimateGroup from "../AppAnimateGroup";
-import { SxProps } from "@mui/system";
-import { useWidth } from "@devdocs/helpers/Common";
+import React, { CSSProperties, ReactNode, useEffect, useState } from 'react';
+import { useBottomScrollListener } from 'react-bottom-scroll-listener';
+import { Box, Theme, useTheme } from '@mui/material';
+import AppAnimateGroup from '../AppAnimateGroup';
+import { SxProps } from '@mui/system';
+import { useWidth } from '@devdocs/helpers/Common';
 
 type GridViewProps = {
   sx?: SxProps<Theme>;
@@ -54,7 +54,7 @@ const GridView: React.FC<GridViewProps> = ({
   column = 3,
   responsive,
   itemPadding = 12,
-  animation = "transition.expandIn",
+  animation = 'transition.expandIn',
   renderRow,
   onEndReached,
   data = [],
@@ -69,7 +69,7 @@ const GridView: React.FC<GridViewProps> = ({
     border: `1px solid ${theme.palette.divider}`,
     backgroundColor: theme.palette.background.paper,
     borderRadius: 4,
-    overflow: "hidden",
+    overflow: 'hidden',
   };
 
   const [displayColumn, setColumn] = useState<number>(column);
@@ -84,13 +84,13 @@ const GridView: React.FC<GridViewProps> = ({
   useEffect(() => {
     const getColumnCount = () => {
       if (responsive) {
-        if (width === "xs") {
+        if (width === 'xs') {
           return responsive.xs || column;
-        } else if (width === "sm") {
+        } else if (width === 'sm') {
           return responsive.sm || responsive.xs || column;
-        } else if (width === "md") {
+        } else if (width === 'md') {
           return responsive.md || responsive.sm || responsive.xs || column;
-        } else if (width === "lg") {
+        } else if (width === 'lg') {
           return (
             responsive.lg ||
             responsive.md ||
@@ -98,7 +98,7 @@ const GridView: React.FC<GridViewProps> = ({
             responsive.xs ||
             column
           );
-        } else if (width === "xl") {
+        } else if (width === 'xl') {
           return (
             responsive.xl ||
             responsive.lg ||
@@ -123,7 +123,7 @@ const GridView: React.FC<GridViewProps> = ({
   return (
     <Box
       sx={{
-        width: "100%",
+        width: '100%',
         ...sx,
       }}
     >
@@ -132,9 +132,9 @@ const GridView: React.FC<GridViewProps> = ({
           animation,
         }}
         style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
           margin: -itemPadding,
           ...style,
         }}
@@ -147,9 +147,9 @@ const GridView: React.FC<GridViewProps> = ({
                 maxWidth: `${100 / displayColumn}%`,
                 flexBasis: `${100 / displayColumn}%`,
                 padding: itemPadding,
-                boxSizing: "border-box",
+                boxSizing: 'border-box',
               }}
-              key={"grid-" + index}
+              key={'grid-' + index}
             >
               {renderRow(item, index)}
             </Box>

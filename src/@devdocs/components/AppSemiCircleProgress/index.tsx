@@ -1,7 +1,7 @@
-import React, { CSSProperties, ReactNode } from "react";
-import { Box } from "@mui/material";
-import { Fonts } from "@devdocs/constants/AppEnums";
-import { getBreakPointsValue } from "@devdocs/helpers/Common";
+import React, { CSSProperties, ReactNode } from 'react';
+import { Box } from '@mui/material';
+import { Fonts } from '@devdocs/constants/AppEnums';
+import { getBreakPointsValue } from '@devdocs/helpers/Common';
 
 const withWidth = () => (WrappedComponent: any) =>
   function (props: any) {
@@ -15,8 +15,8 @@ type AppSemiCircleProgressProps = {
   strokeWidth: number;
   pathColor: string;
   diameter: number;
-  orientation: "up" | "down";
-  direction: "left" | "right";
+  orientation: 'up' | 'down';
+  direction: 'left' | 'right';
   showPercentValue: boolean;
   percentage: any;
 
@@ -24,14 +24,14 @@ type AppSemiCircleProgressProps = {
 };
 
 const AppSemiCircleProgress: React.FC<AppSemiCircleProgressProps> = ({
-  activeColor = "#02B732",
+  activeColor = '#02B732',
   valueNode,
   labelStyle,
   strokeWidth = 10,
-  pathColor = "#D0D0CE",
+  pathColor = '#D0D0CE',
   diameter = 200,
-  orientation = "up",
-  direction = "right",
+  orientation = 'up',
+  direction = 'right',
   showPercentValue = false,
   percentage,
   ...rest
@@ -53,24 +53,24 @@ const AppSemiCircleProgress: React.FC<AppSemiCircleProgressProps> = ({
   const semiCirclePercentage = percentageValue * (circumference / 100);
 
   let rotation;
-  if (orientation === "down") {
-    if (direction === "left") {
-      rotation = "rotate(180deg) rotateY(180deg)";
+  if (orientation === 'down') {
+    if (direction === 'left') {
+      rotation = 'rotate(180deg) rotateY(180deg)';
     } else {
-      rotation = "rotate(180deg)";
+      rotation = 'rotate(180deg)';
     }
   } else {
-    if (direction === "right") {
-      rotation = "rotateY(180deg)";
+    if (direction === 'right') {
+      rotation = 'rotateY(180deg)';
     }
   }
 
   return (
-    <Box sx={{ width: actualDiameter }} style={{ position: "relative" }}>
+    <Box sx={{ width: actualDiameter }} style={{ position: 'relative' }}>
       <svg
         width={actualDiameter}
         height={actualDiameter / 2}
-        style={{ transform: rotation, overflow: "hidden" }}
+        style={{ transform: rotation, overflow: 'hidden' }}
       >
         <circle
           cx={coordinateForCircle}
@@ -95,23 +95,23 @@ const AppSemiCircleProgress: React.FC<AppSemiCircleProgressProps> = ({
           style={{
             strokeDashoffset: semiCirclePercentage,
             transition:
-              "activeColor-dashoffset .3s ease 0s, activeColor-dasharray .3s ease 0s, activeColor .3s",
+              'activeColor-dashoffset .3s ease 0s, activeColor-dasharray .3s ease 0s, activeColor .3s',
           }}
         />
       </svg>
-      {showPercentValue && typeof valueNode === "object" ? (
+      {showPercentValue && typeof valueNode === 'object' ? (
         valueNode
       ) : (
         <div
           style={{
-            width: "100%",
-            left: "0",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            bottom: orientation === "down" ? "auto" : "0",
-            position: "absolute",
+            width: '100%',
+            left: '0',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            bottom: orientation === 'down' ? 'auto' : '0',
+            position: 'absolute',
             ...labelStyle,
           }}
         >
@@ -128,7 +128,7 @@ const AppSemiCircleProgress: React.FC<AppSemiCircleProgressProps> = ({
             component="span"
             sx={{
               fontSize: { xs: 16, sm: 18, xl: 20 },
-              textTransform: "uppercase",
+              textTransform: 'uppercase',
               color: (theme) => theme.palette.text.secondary,
             }}
           >

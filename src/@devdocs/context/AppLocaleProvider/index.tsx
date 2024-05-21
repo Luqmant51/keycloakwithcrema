@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
-import { IntlProvider } from "react-intl";
-import { useLocaleContext } from "../AppContextProvider/LocaleContextProvider";
-import AppLocale from "@devdocs/services/localization";
-import { IntlGlobalProvider } from "@devdocs/helpers/Common";
+import React, { ReactNode } from 'react';
+import { IntlProvider } from 'react-intl';
+import { useLocaleContext } from '../AppContextProvider/LocaleContextProvider';
+import AppLocale from '@devdocs/services/localization';
+import { IntlGlobalProvider } from '@devdocs/helpers/Common';
 
 interface AppLocaleProviderProps {
   children: ReactNode;

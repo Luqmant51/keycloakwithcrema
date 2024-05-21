@@ -1,13 +1,13 @@
-import React, { useMemo } from "react";
-import clsx from "clsx";
-import VerticalCollapse from "../VerticalCollapse";
-import VerticalItem from "../VerticalItem";
-import IntlMessages from "@devdocs/helpers/IntlMessages";
-import { checkPermission } from "@devdocs/helpers/RouteHelper";
-import { useAuthUser } from "@devdocs/hooks/AuthHooks";
-import { useSidebarContext } from "@devdocs/context/AppContextProvider/SidebarContextProvider";
-import VerticalNavGroupItem from "./VerticalNavGroupItem";
-import { RouterConfigData } from "@devdocs/types/models/Apps";
+import React, { useMemo } from 'react';
+import clsx from 'clsx';
+import VerticalCollapse from '../VerticalCollapse';
+import VerticalItem from '../VerticalItem';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
+import { checkPermission } from '@devdocs/helpers/RouteHelper';
+import { useAuthUser } from '@devdocs/hooks/AuthHooks';
+import { useSidebarContext } from '@devdocs/context/AppContextProvider/SidebarContextProvider';
+import VerticalNavGroupItem from './VerticalNavGroupItem';
+import { RouterConfigData } from '@devdocs/types/models/Apps';
 
 type VerticalNavGroupProps = {
   item?: RouterConfigData;
@@ -31,7 +31,7 @@ const VerticalNavGroup: React.FC<VerticalNavGroupProps> = ({ item, level }) => {
         level={level}
         sidebarTextColor={sidebarTextColor}
         component="div"
-        className={clsx("nav-item nav-item-header")}
+        className={clsx('nav-item nav-item-header')}
       >
         {<IntlMessages id={item!.messageId} />}
       </VerticalNavGroupItem>
@@ -40,15 +40,15 @@ const VerticalNavGroup: React.FC<VerticalNavGroupProps> = ({ item, level }) => {
         <>
           {item!.children.map((item) => (
             <React.Fragment key={item.id}>
-              {item.type === "group" && (
+              {item.type === 'group' && (
                 <NavVerticalGroup item={item} level={level} />
               )}
 
-              {item.type === "collapse" && (
+              {item.type === 'collapse' && (
                 <VerticalCollapse item={item} level={level} />
               )}
 
-              {item.type === "item" && (
+              {item.type === 'item' && (
                 <VerticalItem item={item} level={level} />
               )}
             </React.Fragment>

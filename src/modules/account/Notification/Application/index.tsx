@@ -1,10 +1,10 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
-import { Fonts } from "@devdocs/constants/AppEnums";
-import IntlMessages from "@devdocs/helpers/IntlMessages";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
-import { ActivityType } from "@devdocs/types/models/account";
+import React from 'react';
+import { Box, Typography } from '@mui/material';
+import { Fonts } from '@devdocs/constants/AppEnums';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
+import { ActivityType } from '@devdocs/types/models/account';
 
 type ActivityProps = {
   application: ActivityType[];

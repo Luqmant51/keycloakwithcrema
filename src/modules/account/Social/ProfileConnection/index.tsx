@@ -1,10 +1,10 @@
-import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
-import { Fonts } from "@devdocs/constants/AppEnums";
-import IntlMessages from "@devdocs/helpers/IntlMessages";
-import AppGridContainer from "@devdocs/components/AppGridContainer";
-import Member from "./Member";
-import { MemberDataType } from "@devdocs/types/models/account";
+import React from 'react';
+import { Box, Grid, Typography } from '@mui/material';
+import { Fonts } from '@devdocs/constants/AppEnums';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
+import AppGridContainer from '@devdocs/components/AppGridContainer';
+import Member from './Member';
+import { MemberDataType } from '@devdocs/types/models/account';
 
 type ProfileConnectionProps = {
   profileConnection: MemberDataType[];
@@ -14,7 +14,7 @@ const ProfileConnection: React.FC<ProfileConnectionProps> = ({
   profileConnection,
 }) => {
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box sx={{ position: 'relative' }}>
       <Typography
         component="h3"
         sx={{

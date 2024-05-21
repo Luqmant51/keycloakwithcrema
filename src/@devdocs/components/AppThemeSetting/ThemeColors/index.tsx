@@ -1,14 +1,14 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import { CustomizerItemWrapper } from "../index.style";
-import IntlMessages from "@devdocs/helpers/IntlMessages";
-import themeColorSets from "@devdocs/constants/ColorSets";
-import CustomColorCell from "../CustomColorCell";
+import React from 'react';
+import Box from '@mui/material/Box';
+import { CustomizerItemWrapper } from '../index.style';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
+import themeColorSets from '@devdocs/constants/ColorSets';
+import CustomColorCell from '../CustomColorCell';
 import {
   useThemeActionsContext,
   useThemeContext,
-} from "@devdocs/context/AppContextProvider/ThemeContextProvider";
-import AppGrid from "../../AppGrid";
+} from '@devdocs/context/AppContextProvider/ThemeContextProvider';
+import AppGrid from '../../AppGrid';
 
 export type ThemeColorsProps = {
   mode: string;

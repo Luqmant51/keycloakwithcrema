@@ -69,36 +69,36 @@ const AppsSideBarFolderList = styled(ListItem)(({ theme }) => {
 
 const getIconByName = (name: string) => {
   switch (name) {
-    case 'inbox':
-      return <EmailOutlinedIcon />;
-    case 'sent':
-      return <SendOutlinedIcon />;
-    case 'draft':
-      return <DraftsOutlinedIcon />;
-    case 'starred':
-      return <StarBorderOutlinedIcon />;
-    case 'spam':
-      return <InfoOutlinedIcon />;
-    case 'trash':
-      return <DeleteOutlineIcon />;
-    case 'archive':
-      return <ArchiveOutlinedIcon />;
-    case 'all':
-      return <GroupOutlinedIcon />;
-    case 'frequent':
-      return <AutorenewOutlinedIcon />;
-    case 'priority':
-      return <LabelImportantIcon />;
-    case 'scheduled':
-      return <ScheduleOutlinedIcon />;
-    case 'today':
-      return <TodayOutlinedIcon />;
-    case 'completed':
-      return <CheckCircleOutlinedIcon />;
-    case 'deleted':
-      return <DeleteOutlineIcon />;
-    default:
-      return <PersonOutlinedIcon />;
+  case 'inbox':
+    return <EmailOutlinedIcon />;
+  case 'sent':
+    return <SendOutlinedIcon />;
+  case 'draft':
+    return <DraftsOutlinedIcon />;
+  case 'starred':
+    return <StarBorderOutlinedIcon />;
+  case 'spam':
+    return <InfoOutlinedIcon />;
+  case 'trash':
+    return <DeleteOutlineIcon />;
+  case 'archive':
+    return <ArchiveOutlinedIcon />;
+  case 'all':
+    return <GroupOutlinedIcon />;
+  case 'frequent':
+    return <AutorenewOutlinedIcon />;
+  case 'priority':
+    return <LabelImportantIcon />;
+  case 'scheduled':
+    return <ScheduleOutlinedIcon />;
+  case 'today':
+    return <TodayOutlinedIcon />;
+  case 'completed':
+    return <CheckCircleOutlinedIcon />;
+  case 'deleted':
+    return <DeleteOutlineIcon />;
+  default:
+    return <PersonOutlinedIcon />;
   }
 };
 

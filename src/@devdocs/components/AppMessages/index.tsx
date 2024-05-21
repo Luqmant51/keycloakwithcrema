@@ -10,26 +10,26 @@ import { SxProps } from '@mui/system';
 
 type AppMessagesProps ={
   sxMessageContentStyle?: SxProps<Theme>;
-  drawerPosition?: "left" | "top" | "right" | "bottom";
+  drawerPosition?: 'left' | 'top' | 'right' | 'bottom';
   tooltipPosition?:
-    | "bottom-end"
-    | "bottom-start"
-    | "bottom"
-    | "left-end"
-    | "left-start"
-    | "left"
-    | "right-end"
-    | "right-start"
-    | "right"
-    | "top-end"
-    | "top-start"
-    | "top";
+    | 'bottom-end'
+    | 'bottom-start'
+    | 'bottom'
+    | 'left-end'
+    | 'left-start'
+    | 'left'
+    | 'right-end'
+    | 'right-start'
+    | 'right'
+    | 'top-end'
+    | 'top-start'
+    | 'top';
   isMenu?: boolean;
 }
 
 const AppMessages: React.FC<AppMessagesProps> = ({
-  drawerPosition = "right",
-  tooltipPosition = "bottom",
+  drawerPosition = 'right',
+  tooltipPosition = 'bottom',
   isMenu = false,
   sxMessageContentStyle = {},
 }) => {
@@ -45,14 +45,14 @@ const AppMessages: React.FC<AppMessagesProps> = ({
           <IconButton
             className="icon-btn"
             sx={{
-              borderRadius: "50%",
+              borderRadius: '50%',
               width: 40,
               height: 40,
               color: (theme) => theme.palette.text.secondary,
               backgroundColor: (theme) => theme.palette.background.default,
               border: 1,
-              borderColor: "transparent",
-              "&:hover, &:focus": {
+              borderColor: 'transparent',
+              '&:hover, &:focus': {
                 color: (theme) => theme.palette.text.primary,
                 backgroundColor: (theme) =>
                   alpha(theme.palette.background.default, 0.9),

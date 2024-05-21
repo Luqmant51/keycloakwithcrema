@@ -89,7 +89,7 @@ const NavBar = () => {
             sx={{
               backgroundColor: isScroll ? '' : 'red',
             }}
-            onClick={() => signIn("keycloak")}
+            onClick={() => signIn('keycloak')}
           >
             {isAuthenticated ? 'Go to Dashboard' : 'Sign In'}
           </Button>

@@ -143,11 +143,11 @@ const VerticalNavItem: React.FC<VerticalNavItemProps> = ({
           },
           '&:before': {
             top: -40,
-            boxShadow: `30px 30px 0 10px transparent`,
+            boxShadow: '30px 30px 0 10px transparent',
           },
           '&:after': {
             bottom: -40,
-            boxShadow: `30px -30px 0 10px transparent`,
+            boxShadow: '30px -30px 0 10px transparent',
           },
           '&:hover, &.active': {
             backgroundColor: sidebarMenuSelectedBgColor,

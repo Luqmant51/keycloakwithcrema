@@ -3,23 +3,23 @@ import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 
 const StyledTextField = styled(TextField)({
-    '& label.Mui-focused': {
-        color: 'green',
+  '& label.Mui-focused': {
+    color: 'green',
+  },
+  '& .MuiInput-underline:after': {
+    borderBottomColor: 'green',
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'red',
     },
-    '& .MuiInput-underline:after': {
-        borderBottomColor: 'green',
+    '&:hover fieldset': {
+      borderColor: 'yellow',
     },
-    '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-            borderColor: 'red',
-        },
-        '&:hover fieldset': {
-            borderColor: 'yellow',
-        },
-        '&.Mui-focused fieldset': {
-            borderColor: 'green',
-        },
+    '&.Mui-focused fieldset': {
+      borderColor: 'green',
     },
+  },
 });
 
 interface InputProps {
@@ -34,8 +34,8 @@ interface InputProps {
     InputProps?: any;
 }
 
-const NewTextField: React.FC<InputProps> = ({ label = "Text Field", variant = 'outlined', ...props }) => {
-    return <StyledTextField label={label} variant={variant} {...props} />;
+const NewTextField: React.FC<InputProps> = ({ label = 'Text Field', variant = 'outlined', ...props }) => {
+  return <StyledTextField label={label} variant={variant} {...props} />;
 };
 
 export default NewTextField;

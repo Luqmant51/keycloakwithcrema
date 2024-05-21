@@ -115,20 +115,20 @@ const FirebaseAuthProvider: React.FC<FirebaseAuthProviderProps> = ({
 
   const getProvider = (providerName: string) => {
     switch (providerName) {
-      case 'google': {
-        return googleAuthProvider;
-      }
-      case 'facebook': {
-        return facebookAuthProvider;
-      }
-      case 'twitter': {
-        return twitterAuthProvider;
-      }
-      case 'github': {
-        return githubAuthProvider;
-      }
-      default:
-        return googleAuthProvider;
+    case 'google': {
+      return googleAuthProvider;
+    }
+    case 'facebook': {
+      return facebookAuthProvider;
+    }
+    case 'twitter': {
+      return twitterAuthProvider;
+    }
+    case 'github': {
+      return githubAuthProvider;
+    }
+    default:
+      return googleAuthProvider;
     }
   };
 

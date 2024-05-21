@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import WorkspaceCard from "../components/workspace";
+import WorkspaceCard from '../components/workspace';
 import { DevButton } from '../components/Button';
 
 type Workspace = {
@@ -7,26 +7,26 @@ type Workspace = {
 };
 
 const Workspace = () => {
-    const [publicWorkspaces, setPublicWorkspaces] = useState<Workspace[]>([{ type: 'public' }]);
+  const [publicWorkspaces, setPublicWorkspaces] = useState<Workspace[]>([{ type: 'public' }]);
 
-    const addPublicWorkspace = () => {
-        setPublicWorkspaces([...publicWorkspaces, { type: 'public' }]);
-    };
+  const addPublicWorkspace = () => {
+    setPublicWorkspaces([...publicWorkspaces, { type: 'public' }]);
+  };
 
-    return (
-        <div>
-            <h1>Welcome to the Workspace</h1>
-            <h2>Private Workspace</h2>
-            <WorkspaceCard type="private" />
+  return (
+    <div>
+      <h1>Welcome to the Workspace</h1>
+      <h2>Private Workspace</h2>
+      <WorkspaceCard type="private" />
 
-            <h2>Public Workspaces</h2>
-            {publicWorkspaces.map((workspace, index) => (
-                <WorkspaceCard key={index} type={workspace.type} />
-            ))}
+      <h2>Public Workspaces</h2>
+      {publicWorkspaces.map((workspace, index) => (
+        <WorkspaceCard key={index} type={workspace.type} />
+      ))}
 
-            <DevButton variant='contained' color='primary' label='Add Public Workspace' size='medium' onClick={addPublicWorkspace} />
-        </div>
-    );
+      <DevButton variant='contained' color='primary' label='Add Public Workspace' size='medium' onClick={addPublicWorkspace} />
+    </div>
+  );
 };
 
 export default Workspace;

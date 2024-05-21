@@ -1,9 +1,9 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import { Button } from "@mui/material";
-import { useLayoutContext } from "@devdocs/context/AppContextProvider/LayoutContextProvider";
-import Typography from "@mui/material/Typography";
-import FooterWrapper from "./FooterWrapper";
+import React from 'react';
+import Box from '@mui/material/Box';
+import { Button } from '@mui/material';
+import { useLayoutContext } from '@devdocs/context/AppContextProvider/LayoutContextProvider';
+import Typography from '@mui/material/Typography';
+import FooterWrapper from './FooterWrapper';
 
 const AppFooter = () => {
   const { footer, footerType, navStyle } = useLayoutContext();
@@ -11,26 +11,26 @@ const AppFooter = () => {
   return (
     <>
       {footer &&
-      footerType === "fluid" &&
-      navStyle !== "h-default" &&
-      navStyle !== "hor-light-nav" &&
-      navStyle !== "hor-dark-layout" ? (
-        <FooterWrapper className="footer">
-          <div className="footerContainer">
-            <Typography>Copy right @devdocs 2021</Typography>
-            <Box sx={{ ml: "auto" }}>
-              <Button
-                sx={{
-                  px: 5,
-                }}
-                color="primary"
-              >
+      footerType === 'fluid' &&
+      navStyle !== 'h-default' &&
+      navStyle !== 'hor-light-nav' &&
+      navStyle !== 'hor-dark-layout' ? (
+          <FooterWrapper className="footer">
+            <div className="footerContainer">
+              <Typography>Copy right @devdocs 2021</Typography>
+              <Box sx={{ ml: 'auto' }}>
+                <Button
+                  sx={{
+                    px: 5,
+                  }}
+                  color="primary"
+                >
                 Buy Now
-              </Button>
-            </Box>
-          </div>
-        </FooterWrapper>
-      ) : null}
+                </Button>
+              </Box>
+            </div>
+          </FooterWrapper>
+        ) : null}
     </>
   );
 };

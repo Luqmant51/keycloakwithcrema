@@ -1,34 +1,34 @@
-import React from "react";
-import languageData from "./data";
-import Menu from "@mui/material/Menu";
-import IconButton from "@mui/material/IconButton";
-import MenuItem from "@mui/material/MenuItem";
-import TranslateOutlinedIcon from "@mui/icons-material/TranslateOutlined";
-import { Fonts } from "@devdocs/constants/AppEnums";
+import React from 'react';
+import languageData from './data';
+import Menu from '@mui/material/Menu';
+import IconButton from '@mui/material/IconButton';
+import MenuItem from '@mui/material/MenuItem';
+import TranslateOutlinedIcon from '@mui/icons-material/TranslateOutlined';
+import { Fonts } from '@devdocs/constants/AppEnums';
 import {
   useLocaleActionsContext,
   useLocaleContext,
-} from "@devdocs/context/AppContextProvider/LocaleContextProvider";
-import Typography from "@mui/material/Typography";
-import { alpha, Box } from "@mui/material";
-import AppTooltip from "../AppTooltip";
-import { LanguageProps } from "@devdocs/types/models/Apps";
+} from '@devdocs/context/AppContextProvider/LocaleContextProvider';
+import Typography from '@mui/material/Typography';
+import { alpha, Box } from '@mui/material';
+import AppTooltip from '../AppTooltip';
+import { LanguageProps } from '@devdocs/types/models/Apps';
 
 type AppLngSwitcherProps = {
   iconOnly?: boolean;
   tooltipPosition?:
-    | "bottom-end"
-    | "bottom-start"
-    | "bottom"
-    | "left-end"
-    | "left-start"
-    | "left"
-    | "right-end"
-    | "right-start"
-    | "right"
-    | "top-end"
-    | "top-start"
-    | "top";
+    | 'bottom-end'
+    | 'bottom-start'
+    | 'bottom'
+    | 'left-end'
+    | 'left-start'
+    | 'left'
+    | 'right-end'
+    | 'right-start'
+    | 'right'
+    | 'top-end'
+    | 'top-start'
+    | 'top';
 };
 
 const AppLngSwitcher: React.FC<AppLngSwitcherProps> = ({
@@ -52,8 +52,8 @@ const AppLngSwitcher: React.FC<AppLngSwitcherProps> = ({
   return (
     <Box
       sx={{
-        display: "flex",
-        flexDirection: "column",
+        display: 'flex',
+        flexDirection: 'column',
       }}
     >
       {!iconOnly ? (
@@ -62,24 +62,24 @@ const AppLngSwitcher: React.FC<AppLngSwitcherProps> = ({
             height: 40,
             fontSize: 16,
             borderRadius: 30,
-            padding: "6px 12px",
+            padding: '6px 12px',
             color: (theme) => theme.palette.text.secondary,
             backgroundColor: (theme) => theme.palette.background.default,
             border: 1,
-            borderColor: "transparent",
-            "&:hover, &:focus": {
+            borderColor: 'transparent',
+            '&:hover, &:focus': {
               color: (theme) => theme.palette.text.primary,
               backgroundColor: (theme) =>
                 alpha(theme.palette.background.default, 0.9),
               borderColor: (theme) => alpha(theme.palette.text.secondary, 0.25),
             },
-            "& .langText": {
+            '& .langText': {
               ml: 2.5,
               fontSize: 16,
               fontWeight: Fonts.REGULAR,
-              display: { xs: "none", sm: "inline-block" },
+              display: { xs: 'none', sm: 'inline-block' },
             },
-            "& svg": {
+            '& svg': {
               fontSize: 20,
             },
           }}
@@ -100,26 +100,26 @@ const AppLngSwitcher: React.FC<AppLngSwitcherProps> = ({
             sx={{
               height: 40,
               width: 40,
-              borderRadius: "50%",
-              padding: "6px 9px",
+              borderRadius: '50%',
+              padding: '6px 9px',
               color: (theme) => theme.palette.text.secondary,
               backgroundColor: (theme) => theme.palette.background.default,
               border: 1,
-              borderColor: "transparent",
-              "&:hover, &:focus": {
+              borderColor: 'transparent',
+              '&:hover, &:focus': {
                 color: (theme) => theme.palette.text.primary,
                 backgroundColor: (theme) =>
                   alpha(theme.palette.background.default, 0.9),
                 borderColor: (theme) =>
                   alpha(theme.palette.text.secondary, 0.25),
               },
-              "& .langText": {
+              '& .langText': {
                 ml: 2.5,
                 fontSize: 16,
                 fontWeight: Fonts.REGULAR,
-                display: { xs: "none", sm: "inline-block" },
+                display: { xs: 'none', sm: 'inline-block' },
               },
-              "& svg": {
+              '& svg': {
                 fontSize: 20,
               },
             }}

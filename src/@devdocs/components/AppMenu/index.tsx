@@ -37,7 +37,7 @@ const AppMenu = () => {
         {options.map((option) => (
           <MenuItem
             key={option}
-            selected={option === "Pyxis"}
+            selected={option === 'Pyxis'}
             onClick={handleClose}
           >
             {option}

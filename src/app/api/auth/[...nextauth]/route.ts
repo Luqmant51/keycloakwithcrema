@@ -1,40 +1,40 @@
 // src/app/api/auth/[...nextauth]/route.ts
-import { encrypt } from "../../../../utils/encryption";
-import NextAuth, { AuthOptions } from "next-auth";
-import jwt_decode from "jwt-decode";
-import KeycloakProvider from "next-auth/providers/keycloak"
+import { encrypt } from '../../../../utils/encryption';
+import NextAuth, { AuthOptions } from 'next-auth';
+import jwt_decode from 'jwt-decode';
+import KeycloakProvider from 'next-auth/providers/keycloak';
 
 async function refreshAccessToken(token: any) {
-    const resp = await fetch(`${process.env.REFRESH_TOKEN_URL}`, {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-            client_id: process.env.DEMO_FRONTEND_CLIENT_ID!,
-            client_secret: process.env.NEXTAUTH_SECRET!,
-            grant_type: "refresh_token",
-            refresh_token: token.refresh_token,
-        }),
-        method: "POST",
-    });
-    const refreshToken = await resp.json();
-    if (!resp.ok) throw refreshToken;
+  const resp = await fetch(`${process.env.REFRESH_TOKEN_URL}`, {
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      client_id: process.env.DEMO_FRONTEND_CLIENT_ID!,
+      client_secret: process.env.NEXTAUTH_SECRET!,
+      grant_type: 'refresh_token',
+      refresh_token: token.refresh_token,
+    }),
+    method: 'POST',
+  });
+  const refreshToken = await resp.json();
+  if (!resp.ok) throw refreshToken;
 
-    return {
-        ...token,
-        access_token: refreshToken.access_token,
-        decoded: jwt_decode(refreshToken.access_token),
-        id_token: refreshToken.id_token,
-        expires_at: Math.floor(Date.now() / 1000) + refreshToken.expires_in,
-        refresh_token: refreshToken.refresh_token,
-    };
+  return {
+    ...token,
+    access_token: refreshToken.access_token,
+    decoded: jwt_decode(refreshToken.access_token),
+    id_token: refreshToken.id_token,
+    expires_at: Math.floor(Date.now() / 1000) + refreshToken.expires_in,
+    refresh_token: refreshToken.refresh_token,
+  };
 }
 
 export const authOptions: AuthOptions = {
-    providers: [
-        KeycloakProvider({
-            clientId: process.env.KEYCLOAK_CLIENT_ID!,
-            clientSecret: process.env.KEYCLOAK_CLIENT_SECRET!,
-            issuer: process.env.KEYCLOAK_ISSUER
-        })],
+  providers: [
+    KeycloakProvider({
+      clientId: process.env.KEYCLOAK_CLIENT_ID!,
+      clientSecret: process.env.KEYCLOAK_CLIENT_SECRET!,
+      issuer: process.env.KEYCLOAK_ISSUER
+    })],
 
     callbacks: {
         async jwt({ token, account }) {
@@ -77,4 +77,4 @@ export const authOptions: AuthOptions = {
 };
 
 const handler = NextAuth(authOptions);
-export { handler as GET, handler as POST }
+export { handler as GET, handler as POST };

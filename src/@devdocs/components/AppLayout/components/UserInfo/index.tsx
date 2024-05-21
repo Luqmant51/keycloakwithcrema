@@ -45,14 +45,14 @@ const UserInfo: React.FC<UserInfoProps> = ({ color = 'text.secondary' }) => {
 
   async function keyCloakLogout() {
     try {
-      await fetch("/api/auth/logout", { method: "GET" })
+      await fetch('/api/auth/logout', { method: 'GET' });
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 
   const handleLogout = async () => {
-    keyCloakLogout().then(() => signOut({ callbackUrl: "/" }));
+    keyCloakLogout().then(() => signOut({ callbackUrl: '/' }));
   };
 
   return (

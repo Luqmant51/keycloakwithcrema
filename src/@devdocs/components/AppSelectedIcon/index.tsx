@@ -18,18 +18,18 @@ const AppSelectedIcon: React.FC<AppSelectedIconProps> = ({
 }) => {
   const centerStyle: SxProps<Theme> = isCenter
     ? {
-        position: 'absolute',
-        left: '50%',
-        top: '50%',
-        zIndex: 1,
-        transform: 'translate(-50%, -50%)',
-      }
+      position: 'absolute',
+      left: '50%',
+      top: '50%',
+      zIndex: 1,
+      transform: 'translate(-50%, -50%)',
+    }
     : {
-        position: 'absolute',
-        right: 10,
-        top: 10,
-        zIndex: 1,
-      };
+      position: 'absolute',
+      right: 10,
+      top: 10,
+      zIndex: 1,
+    };
   return (
     <Box
       sx={{

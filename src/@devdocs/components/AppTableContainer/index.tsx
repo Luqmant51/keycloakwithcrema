@@ -15,8 +15,8 @@ const AppTableContainer: React.FC<AppTableContainerProps> = ({
   return (
     <TableContainer
       sx={{
-        "& tr > th, & tr > td": {
-          whiteSpace: "nowrap",
+        '& tr > th, & tr > td': {
+          whiteSpace: 'nowrap',
         },
         ...sxStyle,
       }}

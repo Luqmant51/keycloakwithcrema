@@ -1,13 +1,13 @@
-import React from "react";
-import { Button } from "@mui/material";
-import AppGridContainer from "@devdocs/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import IntlMessages from "@devdocs/helpers/IntlMessages";
-import Box from "@mui/material/Box";
-import ProfileConnection from "./ProfileConnection";
-import { Form } from "formik";
-import AppTextField from "@devdocs/components/AppFormComponents/AppTextField";
-import { MemberDataType } from "@devdocs/types/models/account";
+import React from 'react';
+import { Button } from '@mui/material';
+import AppGridContainer from '@devdocs/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
+import Box from '@mui/material/Box';
+import ProfileConnection from './ProfileConnection';
+import { Form } from 'formik';
+import AppTextField from '@devdocs/components/AppFormComponents/AppTextField';
+import { MemberDataType } from '@devdocs/types/models/account';
 
 type SocialFormProps = {
   social: MemberDataType[];
@@ -20,7 +20,7 @@ const SocialForm: React.FC<SocialFormProps> = ({ social }) => {
         <Grid item xs={12}>
           <Box
             sx={{
-              position: "relative",
+              position: 'relative',
               maxWidth: 550,
             }}
           >
@@ -87,13 +87,13 @@ const SocialForm: React.FC<SocialFormProps> = ({ social }) => {
         <Grid item xs={12} md={12}>
           <Box
             sx={{
-              display: "flex",
-              alignItems: "center",
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
             <Button
               sx={{
-                position: "relative",
+                position: 'relative',
                 minWidth: 100,
               }}
               color="primary"
@@ -104,7 +104,7 @@ const SocialForm: React.FC<SocialFormProps> = ({ social }) => {
             </Button>
             <Button
               sx={{
-                position: "relative",
+                position: 'relative',
                 minWidth: 100,
                 ml: 2.5,
               }}

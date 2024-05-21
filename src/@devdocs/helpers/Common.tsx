@@ -17,18 +17,18 @@ export const useWidth = () => {
 export const getBreakPointsValue = (valueSet: any, breakpoint: Breakpoint) => {
   if (typeof valueSet === 'number') return valueSet;
   switch (breakpoint) {
-    case 'xs':
-      return valueSet.xs;
-    case 'sm':
-      return valueSet.sm || valueSet.xs;
-    case 'md':
-      return valueSet.md || valueSet.sm || valueSet.xs;
-    case 'lg':
-      return valueSet.lg || valueSet.md || valueSet.sm || valueSet.xs;
-    default:
-      return (
-        valueSet.xl || valueSet.lg || valueSet.md || valueSet.sm || valueSet.xs
-      );
+  case 'xs':
+    return valueSet.xs;
+  case 'sm':
+    return valueSet.sm || valueSet.xs;
+  case 'md':
+    return valueSet.md || valueSet.sm || valueSet.xs;
+  case 'lg':
+    return valueSet.lg || valueSet.md || valueSet.sm || valueSet.xs;
+  default:
+    return (
+      valueSet.xl || valueSet.lg || valueSet.md || valueSet.sm || valueSet.xs
+    );
   }
 };
 
@@ -101,7 +101,7 @@ export const generateRandomUniqueNumber = (): number => {
   if (numbers.includes(number)) {
     return generateRandomUniqueNumber();
   } else {
-    numbers.push(number)
+    numbers.push(number);
     return number;
   }
 };

@@ -1,24 +1,24 @@
-import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import AppLngSwitcher from "../../../AppLngSwitcher";
-import Box from "@mui/material/Box";
-import AppSearchBar from "../../../AppSearchBar";
-import Hidden from "@mui/material/Hidden";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import AppMessages from "../../../AppMessages";
-import AppNotifications from "../../../AppNotifications";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import AppTooltip from "../../../AppTooltip";
-import { alpha } from "@mui/material/styles";
-import AppLogo from "../../components/AppLogo";
-import UserInfo from "../../components/UserInfo";
-import HorizontalNav from "../../components/HorizontalNav";
-import { useSidebarContext } from "@devdocs/context/AppContextProvider/SidebarContextProvider";
-import { RouterConfigData } from "@devdocs/types/models/Apps";
+import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import AppLngSwitcher from '../../../AppLngSwitcher';
+import Box from '@mui/material/Box';
+import AppSearchBar from '../../../AppSearchBar';
+import Hidden from '@mui/material/Hidden';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import AppMessages from '../../../AppMessages';
+import AppNotifications from '../../../AppNotifications';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import AppTooltip from '../../../AppTooltip';
+import { alpha } from '@mui/material/styles';
+import AppLogo from '../../components/AppLogo';
+import UserInfo from '../../components/UserInfo';
+import HorizontalNav from '../../components/HorizontalNav';
+import { useSidebarContext } from '@devdocs/context/AppContextProvider/SidebarContextProvider';
+import { RouterConfigData } from '@devdocs/types/models/Apps';
 
 type Props = {
   toggleNavCollapsed: () => void;
@@ -42,37 +42,37 @@ const AppHeader = ({ toggleNavCollapsed, routesConfig }: Props) => {
     <AppBar
       color="inherit"
       sx={{
-        boxShadow: "none",
+        boxShadow: 'none',
         borderBottom: (theme) => `solid 1px ${theme.palette.divider}`,
-        backgroundColor: "background.paper",
+        backgroundColor: 'background.paper',
         width: {
-          xs: "100%",
+          xs: '100%',
         },
       }}
       className="app-bar"
     >
       <Toolbar
         sx={{
-          boxSizing: "border-box",
+          boxSizing: 'border-box',
           minHeight: { xs: 56, sm: 70 },
           px: { xs: 0 },
         }}
       >
         <Box
           sx={{
-            width: "100%",
+            width: '100%',
             maxWidth: { lg: 1140, xl: 1420 },
-            mx: "auto",
+            mx: 'auto',
             px: 5,
-            display: "flex",
-            alignItems: "center",
+            display: 'flex',
+            alignItems: 'center',
           }}
         >
           <Hidden lgUp>
             <IconButton
               sx={{
                 marginRight: (theme) => theme.spacing(2),
-                color: "text.secondary",
+                color: 'text.secondary',
               }}
               edge="start"
               className="menu-btn"
@@ -93,11 +93,11 @@ const AppHeader = ({ toggleNavCollapsed, routesConfig }: Props) => {
           <Box
             sx={{
               mr: 2,
-              "& .app-logo": {
+              '& .app-logo': {
                 pl: 0,
               },
-              "& .logo-text": {
-                display: { xs: "none", sm: "block" },
+              '& .logo-text': {
+                display: { xs: 'none', sm: 'block' },
               },
             }}
           >
@@ -107,27 +107,27 @@ const AppHeader = ({ toggleNavCollapsed, routesConfig }: Props) => {
             <Box
               sx={{
                 ml: 5,
-                "& .navbarNav": {
-                  display: "flex",
+                '& .navbarNav': {
+                  display: 'flex',
                   padding: 0,
                   mx: { xs: -4, lg: -5 },
                   marginRight: -16,
                 },
-                "& .navItem": {
-                  width: "auto",
-                  cursor: "pointer",
+                '& .navItem': {
+                  width: 'auto',
+                  cursor: 'pointer',
                   px: { xs: 4, lg: 5 },
                   py: 1,
                   borderRadius: 1,
-                  "&.active": {
+                  '&.active': {
                     color: sidebarMenuSelectedTextColor,
                     backgroundColor: alpha(sidebarMenuSelectedBgColor, 0.8),
-                    "& .navLinkIcon": {
+                    '& .navLinkIcon': {
                       color: (theme) => theme.palette.secondary.main,
                     },
                   },
                 },
-                "& .navLinkIcon": {
+                '& .navLinkIcon': {
                   mr: 2.5,
                   color: (theme) => theme.palette.common.white,
                   fontSize: 20,
@@ -146,12 +146,12 @@ const AppHeader = ({ toggleNavCollapsed, routesConfig }: Props) => {
           <Box
             sx={{
               minHeight: 40,
-              position: "relative",
-              display: { xs: "none", sm: "block" },
-              "& .searchRoot": {
-                position: { xs: "absolute", sm: "relative" },
-                right: { xs: 0, sm: "auto" },
-                top: { xs: 0, sm: "auto" },
+              position: 'relative',
+              display: { xs: 'none', sm: 'block' },
+              '& .searchRoot': {
+                position: { xs: 'absolute', sm: 'relative' },
+                right: { xs: 0, sm: 'auto' },
+                top: { xs: 0, sm: 'auto' },
               },
             }}
           >
@@ -164,16 +164,16 @@ const AppHeader = ({ toggleNavCollapsed, routesConfig }: Props) => {
           <Box
             sx={{
               ml: 4,
-              display: "flex",
-              alignItems: "center",
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
             <Hidden smDown>
               <Box
                 sx={{
-                  position: "relative",
-                  display: "flex",
-                  alignItems: "center",
+                  position: 'relative',
+                  display: 'flex',
+                  alignItems: 'center',
                   marginLeft: -2,
                   marginRight: -2,
                 }}
@@ -199,11 +199,11 @@ const AppHeader = ({ toggleNavCollapsed, routesConfig }: Props) => {
               sx={{
                 ml: { sm: 4 },
                 mr: { xs: 4, sm: 0 },
-                "& .user-info-view": {
+                '& .user-info-view': {
                   p: 0,
                 },
-                "& .user-info": {
-                  display: "none",
+                '& .user-info': {
+                  display: 'none',
                 },
               }}
             >
@@ -213,9 +213,9 @@ const AppHeader = ({ toggleNavCollapsed, routesConfig }: Props) => {
             <Hidden smUp>
               <Box
                 sx={{
-                  position: "relative",
-                  display: "flex",
-                  alignItems: "center",
+                  position: 'relative',
+                  display: 'flex',
+                  alignItems: 'center',
                   marginLeft: -2,
                   marginRight: -2,
                 }}
@@ -228,15 +228,15 @@ const AppHeader = ({ toggleNavCollapsed, routesConfig }: Props) => {
                   <AppTooltip title="More">
                     <IconButton
                       sx={{
-                        borderRadius: "50%",
+                        borderRadius: '50%',
                         width: 40,
                         height: 40,
                         color: (theme) => theme.palette.text.secondary,
                         backgroundColor: (theme) =>
                           theme.palette.background.default,
                         border: 1,
-                        borderColor: "transparent",
-                        "&:hover, &:focus": {
+                        borderColor: 'transparent',
+                        '&:hover, &:focus': {
                           color: (theme) => theme.palette.text.primary,
                           backgroundColor: (theme) =>
                             alpha(theme.palette.background.default, 0.9),

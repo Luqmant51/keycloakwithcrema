@@ -1,12 +1,12 @@
-import React from "react";
-import AppMessageView from "../AppMessageView";
-import AppLoader from "../AppLoader";
+import React from 'react';
+import AppMessageView from '../AppMessageView';
+import AppLoader from '../AppLoader';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { hideMessage } from "@devdocs/redux-toolkit/actions";
 import {
   useInfoViewActionsContext,
   useInfoViewContext,
-} from "@devdocs/context/AppContextProvider/InfoViewContextProvider";
+} from '@devdocs/context/AppContextProvider/InfoViewContextProvider';
 
 const AppInfoView = () => {
   // Only for Context APIs

@@ -1,14 +1,14 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-import clsx from "clsx";
-import { CustomizerItemWrapper, StyledToggleButton } from "../index.style";
-import IntlMessages from "@devdocs/helpers/IntlMessages";
-import { ThemeStyle } from "@devdocs/constants/AppEnums";
+import React from 'react';
+import Box from '@mui/material/Box';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import clsx from 'clsx';
+import { CustomizerItemWrapper, StyledToggleButton } from '../index.style';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
+import { ThemeStyle } from '@devdocs/constants/AppEnums';
 import {
   useThemeActionsContext,
   useThemeContext,
-} from "@devdocs/context/AppContextProvider/ThemeContextProvider";
+} from '@devdocs/context/AppContextProvider/ThemeContextProvider';
 
 const ThemeStyles = () => {
   const { themeStyle } = useThemeContext();

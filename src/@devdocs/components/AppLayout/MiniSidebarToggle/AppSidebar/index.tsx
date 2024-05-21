@@ -1,18 +1,18 @@
-import React from "react";
-import clsx from "clsx";
-import AppScrollbar from "../../../AppScrollbar";
-import MainSidebar from "../../components/MainSidebar";
-import Hidden from "@mui/material/Hidden";
-import Drawer from "@mui/material/Drawer";
-import VerticalNav from "../../components/VerticalNav";
-import SidebarWrapper from "./SidebarWrapper";
-import UserInfo from "../../components/UserInfo";
-import { useSidebarContext } from "@devdocs/context/AppContextProvider/SidebarContextProvider";
-import { RouterConfigData } from "@devdocs/types/models/Apps";
-import { useLayoutContext } from "@devdocs/context/AppContextProvider/LayoutContextProvider";
+import React from 'react';
+import clsx from 'clsx';
+import AppScrollbar from '../../../AppScrollbar';
+import MainSidebar from '../../components/MainSidebar';
+import Hidden from '@mui/material/Hidden';
+import Drawer from '@mui/material/Drawer';
+import VerticalNav from '../../components/VerticalNav';
+import SidebarWrapper from './SidebarWrapper';
+import UserInfo from '../../components/UserInfo';
+import { useSidebarContext } from '@devdocs/context/AppContextProvider/SidebarContextProvider';
+import { RouterConfigData } from '@devdocs/types/models/Apps';
+import { useLayoutContext } from '@devdocs/context/AppContextProvider/LayoutContextProvider';
 
 type AppSidebarProps = {
-  position?: "left" | "top" | "right" | "bottom";
+  position?: 'left' | 'top' | 'right' | 'bottom';
   variant?: string;
   routesConfig: RouterConfigData[];
   isNavCollapsed: boolean;
@@ -20,8 +20,8 @@ type AppSidebarProps = {
 };
 
 const AppSidebar: React.FC<AppSidebarProps> = ({
-  variant = "",
-  position = "left",
+  variant = '',
+  position = 'left',
   toggleNavCollapsed,
   isNavCollapsed,
   routesConfig,
@@ -40,7 +40,7 @@ const AppSidebar: React.FC<AppSidebarProps> = ({
             root: clsx(variant),
             paper: clsx(variant),
           }}
-          style={{ position: "absolute" }}
+          style={{ position: 'absolute' }}
         >
           <SidebarWrapper className="mini-toggle-sidebar">
             <MainSidebar>
@@ -48,7 +48,7 @@ const AppSidebar: React.FC<AppSidebarProps> = ({
               <AppScrollbar
                 sx={{
                   py: 2,
-                  height: "calc(100vh - 70px) !important",
+                  height: 'calc(100vh - 70px) !important',
                 }}
                 scrollToTop={false}
               >
@@ -64,13 +64,13 @@ const AppSidebar: React.FC<AppSidebarProps> = ({
             <UserInfo color={sidebarTextColor} />
             <AppScrollbar
               className={clsx({
-                "has-footer-fixed": footer && footerType === "fixed",
+                'has-footer-fixed': footer && footerType === 'fixed',
               })}
               sx={{
                 py: 2,
-                height: "calc(100vh - 70px) !important",
-                "&.has-footer-fixed": {
-                  height: "calc(100vh - 117px) !important",
+                height: 'calc(100vh - 70px) !important',
+                '&.has-footer-fixed': {
+                  height: 'calc(100vh - 117px) !important',
                 },
               }}
               scrollToTop={false}

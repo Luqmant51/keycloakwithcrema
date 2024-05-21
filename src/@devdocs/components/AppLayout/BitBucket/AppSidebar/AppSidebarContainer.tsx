@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import { Box } from "@mui/material";
-import { useSidebarContext } from "@devdocs/context/AppContextProvider/SidebarContextProvider";
+import React, { ReactNode } from 'react';
+import { Box } from '@mui/material';
+import { useSidebarContext } from '@devdocs/context/AppContextProvider/SidebarContextProvider';
 
 type AppSidebarContainerProps = {
   children: ReactNode;
@@ -18,12 +18,12 @@ const AppSidebarContainer: React.FC<AppSidebarContainerProps> = ({
       sx={{
         pl: 0,
         py: 0,
-        transition: "all 0.5s ease",
+        transition: 'all 0.5s ease',
         width: 256,
         borderLeft: `solid 1px ${borderColor}`,
-        "& .app-sidebar": {
-          position: "relative",
-          width: "100%",
+        '& .app-sidebar': {
+          position: 'relative',
+          width: '100%',
           zIndex: 1,
         },
       }}

@@ -1,4 +1,5 @@
 'use client';
+'use client';
 import React from 'react';
 import { Card, CardContent, Typography, Button, List, ListItem, ListItemText } from '@mui/material';
 import { useSession } from 'next-auth/react';

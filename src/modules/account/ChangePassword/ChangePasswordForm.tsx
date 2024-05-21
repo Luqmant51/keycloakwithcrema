@@ -1,13 +1,13 @@
-import React from "react";
-import { Box, Button } from "@mui/material";
-import AppGridContainer from "@devdocs/components/AppGridContainer";
-import Grid from "@mui/material/Grid";
-import IntlMessages from "@devdocs/helpers/IntlMessages";
-import InputAdornment from "@mui/material/InputAdornment";
-import IconButton from "@mui/material/IconButton";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
-import { Form } from "formik";
-import AppTextField from "@devdocs/components/AppFormComponents/AppTextField";
+import React from 'react';
+import { Box, Button } from '@mui/material';
+import AppGridContainer from '@devdocs/components/AppGridContainer';
+import Grid from '@mui/material/Grid';
+import IntlMessages from '@devdocs/helpers/IntlMessages';
+import InputAdornment from '@mui/material/InputAdornment';
+import IconButton from '@mui/material/IconButton';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { Form } from 'formik';
+import AppTextField from '@devdocs/components/AppFormComponents/AppTextField';
 
 const ChangePasswordForm = () => {
   const [showPassword, setShowPassword] = React.useState(false);
@@ -45,7 +45,7 @@ const ChangePasswordForm = () => {
       <AppGridContainer spacing={4}>
         <Grid item xs={12} md={6}>
           <AppTextField
-            type={showPassword ? "text" : "password"}
+            type={showPassword ? 'text' : 'password'}
             name="oldPassword"
             InputProps={{
               endAdornment: (
@@ -64,10 +64,10 @@ const ChangePasswordForm = () => {
             label={<IntlMessages id="common.oldPassword" />}
           />
         </Grid>
-        <Grid item xs={12} md={6} sx={{ p: "0 !important" }} />
+        <Grid item xs={12} md={6} sx={{ p: '0 !important' }} />
         <Grid item xs={12} md={6}>
           <AppTextField
-            type={showNewPassword ? "text" : "password"}
+            type={showNewPassword ? 'text' : 'password'}
             name="newPassword"
             InputProps={{
               endAdornment: (
@@ -88,7 +88,7 @@ const ChangePasswordForm = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <AppTextField
-            type={showRetypeNewPassword ? "text" : "password"}
+            type={showRetypeNewPassword ? 'text' : 'password'}
             name="retypeNewPassword"
             InputProps={{
               endAdornment: (
@@ -110,13 +110,13 @@ const ChangePasswordForm = () => {
         <Grid item xs={12} md={12}>
           <Box
             sx={{
-              display: "flex",
-              alignItems: "center",
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
             <Button
               sx={{
-                position: "relative",
+                position: 'relative',
                 minWidth: 100,
               }}
               color="primary"
@@ -127,7 +127,7 @@ const ChangePasswordForm = () => {
             </Button>
             <Button
               sx={{
-                position: "relative",
+                position: 'relative',
                 minWidth: 100,
                 ml: 2.5,
               }}

@@ -9,7 +9,7 @@ type HorHeaderFixedContainerProps = {
 };
 
 const HorHeaderFixedContainer: React.FC<HorHeaderFixedContainerProps> = ({
-                                                                           children,
+  children,
   ...rest
 }) => {
   return (

@@ -12,7 +12,7 @@ import AuthRoutes from '@devdocs/components/AuthRoutes';
 import AppPageMeta from '@devdocs/components/AppPageMeta';
 import InfoViewContextProvider from '@devdocs/context/AppContextProvider/InfoViewContextProvider';
 import AppAuthProvider from '@devdocs/core/AppAuthProvider';
-import SessionProviderWrapper from "@/utils/sessionProviderWrapper";
+import SessionProviderWrapper from '@/utils/sessionProviderWrapper';
 
 import '../../public/styles/vendors/index.css';
 
@@ -41,23 +41,23 @@ export default function RootLayout({ children }: Props) {
       <body>
         <CacheProvider value={clientSideEmotionCache}>
           <SessionProviderWrapper>
-          <AppContextProvider>
-            <AppThemeProvider>
-              <AppStyleProvider>
-                <AppLocaleProvider>
-                  <InfoViewContextProvider>
-                    <AppAuthProvider>
-                      <AuthRoutes>
-                        <CssBaseline />
-                        <AppPageMeta />
-                        {children}
-                      </AuthRoutes>
-                    </AppAuthProvider>
-                  </InfoViewContextProvider>
-                </AppLocaleProvider>
-              </AppStyleProvider>
-            </AppThemeProvider>
-          </AppContextProvider>
+            <AppContextProvider>
+              <AppThemeProvider>
+                <AppStyleProvider>
+                  <AppLocaleProvider>
+                    <InfoViewContextProvider>
+                      <AppAuthProvider>
+                        <AuthRoutes>
+                          <CssBaseline />
+                          <AppPageMeta />
+                          {children}
+                        </AuthRoutes>
+                      </AppAuthProvider>
+                    </InfoViewContextProvider>
+                  </AppLocaleProvider>
+                </AppStyleProvider>
+              </AppThemeProvider>
+            </AppContextProvider>
           </SessionProviderWrapper>
         </CacheProvider>
       </body>

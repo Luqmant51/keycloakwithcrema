@@ -10,13 +10,12 @@ import { faker } from '@faker-js/faker';
 const Workspace = () => {
   const user = createMockUser({
     id: '12345',
-    first_name: 'Muhammad',
-    last_name: 'Luqman',
+    name: 'Muhammad Luqman',
     email: 'luqmant51@gmail.com',
     identity_id: faker.string.uuid(),
   });
   const { data: session } = useSession();
-  const userName = session ? session?.user?.name : user.first_name;
+  const userName = session ? session?.user?.name : user.name;
 
   const initialPrivateWorkspace: WorkspaceType = createMockWorkspace(userName!, false);
   const initialPublicWorkspace: WorkspaceType = createMockWorkspace(userName!, true);
@@ -24,7 +23,7 @@ const Workspace = () => {
   const [workspaces, setWorkspaces] = useState<WorkspaceType[]>([initialPrivateWorkspace, initialPublicWorkspace]);
 
   const addPublicWorkspace = () => {
-    const newPublicWorkspace = createMockWorkspace(user.first_name, true);
+    const newPublicWorkspace = createMockWorkspace(user.name, true);
     setWorkspaces([...workspaces, newPublicWorkspace]);
   };
 
@@ -39,6 +38,7 @@ const Workspace = () => {
         size='medium'
         onClick={addPublicWorkspace}
       />
+
     </div>
   );
 };

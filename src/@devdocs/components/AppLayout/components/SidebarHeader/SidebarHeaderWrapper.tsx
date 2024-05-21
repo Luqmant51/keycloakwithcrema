@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import { Box } from "@mui/material";
-import { useSidebarContext } from "@devdocs/context/AppContextProvider/SidebarContextProvider";
+import React, { ReactNode } from 'react';
+import { Box } from '@mui/material';
+import { useSidebarContext } from '@devdocs/context/AppContextProvider/SidebarContextProvider';
 
 type SidebarHeaderWrapperProps = {
   children: ReactNode;
@@ -13,14 +13,14 @@ const SidebarHeaderWrapper: React.FC<SidebarHeaderWrapperProps> = ({
   return (
     <Box
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        backgroundColor: isSidebarBgImage ? "transparent" : sidebarHeaderColor,
-        "&:hover": {
-          "& .arrowIcon": {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        backgroundColor: isSidebarBgImage ? 'transparent' : sidebarHeaderColor,
+        '&:hover': {
+          '& .arrowIcon': {
             opacity: 1,
-            visibility: "visible",
+            visibility: 'visible',
           },
         },
       }}

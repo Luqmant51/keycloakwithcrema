@@ -1,16 +1,16 @@
-import React from "react";
-import clsx from "clsx";
-import AppScrollbar from "../../../AppScrollbar";
-import MainSidebar from "../../components/MainSidebar";
-import Hidden from "@mui/material/Hidden";
-import Drawer from "@mui/material/Drawer";
-import VerticalNav from "../../components/VerticalNav";
-import UserMiniHeaderSidebarWrapper from "./UserMiniHeaderSidebarWrapper";
-import { RouterConfigData } from "@devdocs/types/models/Apps";
-import { useLayoutContext } from "@devdocs/context/AppContextProvider/LayoutContextProvider";
+import React from 'react';
+import clsx from 'clsx';
+import AppScrollbar from '../../../AppScrollbar';
+import MainSidebar from '../../components/MainSidebar';
+import Hidden from '@mui/material/Hidden';
+import Drawer from '@mui/material/Drawer';
+import VerticalNav from '../../components/VerticalNav';
+import UserMiniHeaderSidebarWrapper from './UserMiniHeaderSidebarWrapper';
+import { RouterConfigData } from '@devdocs/types/models/Apps';
+import { useLayoutContext } from '@devdocs/context/AppContextProvider/LayoutContextProvider';
 
 type AppSidebarProps = {
-  position?: "left" | "top" | "right" | "bottom";
+  position?: 'left' | 'top' | 'right' | 'bottom';
   variant?: string;
   routesConfig: RouterConfigData[];
   isNavCollapsed: boolean;
@@ -18,8 +18,8 @@ type AppSidebarProps = {
 };
 
 const AppSidebar: React.FC<AppSidebarProps> = ({
-  variant = "",
-  position = "left",
+  variant = '',
+  position = 'left',
   toggleNavCollapsed,
   isNavCollapsed,
   routesConfig,
@@ -37,7 +37,7 @@ const AppSidebar: React.FC<AppSidebarProps> = ({
             root: clsx(variant),
             paper: clsx(variant),
           }}
-          style={{ position: "absolute" }}
+          style={{ position: 'absolute' }}
         >
           <UserMiniHeaderSidebarWrapper className="user-mini-header-sidebar">
             <MainSidebar>
@@ -58,15 +58,15 @@ const AppSidebar: React.FC<AppSidebarProps> = ({
           <MainSidebar>
             <AppScrollbar
               className={clsx({
-                "has-footer-fixed": footer && footerType === "fixed",
+                'has-footer-fixed': footer && footerType === 'fixed',
               })}
               sx={{
                 py: 2,
-                height: "calc(100vh - 71px) !important",
-                "&.has-footer-fixed": {
+                height: 'calc(100vh - 71px) !important',
+                '&.has-footer-fixed': {
                   height: {
-                    xs: "calc(100vh - 119px) !important",
-                    xl: "calc(100vh - 131px) !important",
+                    xs: 'calc(100vh - 119px) !important',
+                    xl: 'calc(100vh - 131px) !important',
                   },
                 },
               }}

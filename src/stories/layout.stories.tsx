@@ -4,35 +4,35 @@ import { fn } from '@storybook/test';
 import PrimaryAppBar from '@/@devdocs/components/AppLayout/DefaultLayout/AppHeaderCustom';
 
 const meta: Meta<typeof PrimaryAppBar> = {
-    title: 'Components/PrimaryAppBarStory',
-    component: PrimaryAppBar,
-    // parameters: {
-    //     layout: 'centered',
-    // },
-    tags: ['autodocs'],
-    args: { onClick: fn() },
+  title: 'Components/PrimaryAppBarStory',
+  component: PrimaryAppBar,
+  // parameters: {
+  //     layout: 'centered',
+  // },
+  tags: ['autodocs'],
+  args: { onClick: fn() },
 };
 
 export default meta;
 
 export const PrimaryAppBarStoryCloseMenu: StoryObj<typeof PrimaryAppBar> = {
-    render: (args) => (
-        <div>
-            <PrimaryAppBar />
-        </div>
-    ),
+  render: (args) => (
+    <div>
+      <PrimaryAppBar />
+    </div>
+  ),
 };
 export const PrimaryAppBarStoryOpenMenu: StoryObj<typeof PrimaryAppBar> = {
-    render: (args) => (
-        <div>
-            <PrimaryAppBar open={true} />
-        </div>
-    ),
+  render: (args) => (
+    <div>
+      <PrimaryAppBar open={true} />
+    </div>
+  ),
 };
 
 
 
 
 const data = () => {
-    return <></>
-}
+  return <></>;
+};

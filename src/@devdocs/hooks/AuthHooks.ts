@@ -1,9 +1,9 @@
 import {
   useFirebase,
   useFirebaseActions,
-} from "@devdocs/services/auth/firebase/FirebaseAuthProvider";
-import { getUserFromFirebase } from "@devdocs/helpers/AuthHelper";
-import { useAuthKeycloak } from "@devdocs/services/auth/keycloack/KeycloakAuthProvider";
+} from '@devdocs/services/auth/firebase/FirebaseAuthProvider';
+import { getUserFromFirebase } from '@devdocs/helpers/AuthHelper';
+import { useAuthKeycloak } from '@devdocs/services/auth/keycloack/KeycloakAuthProvider';
 
 export const useAuthUser = () => {
   const { user, isAuthenticated, isLoading } = useFirebase();

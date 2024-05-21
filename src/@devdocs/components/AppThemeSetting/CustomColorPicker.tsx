@@ -19,10 +19,10 @@ const CustomColorPicker: React.FC<CustomColorPickerProps> = ({
     <>
       <Box
         sx={{
-          display: "flex",
-          alignItems: "center",
-          position: "relative",
-          cursor: "pointer",
+          display: 'flex',
+          alignItems: 'center',
+          position: 'relative',
+          cursor: 'pointer',
           marginBottom: 2.5,
           marginRight: 2.5,
         }}
@@ -45,7 +45,7 @@ const CustomColorPicker: React.FC<CustomColorPickerProps> = ({
       {visible ? (
         <Box
           sx={{
-            position: "absolute",
+            position: 'absolute',
             left: 0,
             top: 0,
             zIndex: 1,

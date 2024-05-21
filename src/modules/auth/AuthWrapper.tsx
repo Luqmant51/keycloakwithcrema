@@ -1,9 +1,9 @@
-import React from "react";
-import Card from "@mui/material/Card";
-import Box from "@mui/material/Box";
-import { Typography } from "@mui/material";
-import { Fonts } from "@devdocs/constants/AppEnums";
-import AppLogo from "@devdocs/components/AppLayout/components/AppLogo";
+import React from 'react';
+import Card from '@mui/material/Card';
+import Box from '@mui/material/Box';
+import { Typography } from '@mui/material';
+import { Fonts } from '@devdocs/constants/AppEnums';
+import AppLogo from '@devdocs/components/AppLayout/components/AppLogo';
 
 type AuthWrapperProps = {
   children: any;
@@ -14,38 +14,38 @@ const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => {
     <Box
       sx={{
         flex: 1,
-        display: "flex",
-        height: "100vh",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
+        display: 'flex',
+        height: '100vh',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <Card
         sx={{
           maxWidth: 900,
           minHeight: { xs: 320, sm: 450 },
-          width: "100%",
-          overflow: "hidden",
-          position: "relative",
-          display: "flex",
+          width: '100%',
+          overflow: 'hidden',
+          position: 'relative',
+          display: 'flex',
         }}
       >
         <Box
           sx={{
-            width: { xs: "100%", sm: "50%", lg: "40%" },
+            width: { xs: '100%', sm: '50%', lg: '40%' },
             padding: { xs: 5, lg: 10 },
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
           }}
         >
           <Box sx={{ mb: { xs: 6, xl: 8 } }}>
             <Box
               sx={{
                 mb: 5,
-                display: "flex",
-                alignItems: "center",
+                display: 'flex',
+                alignItems: 'center',
               }}
             >
               <AppLogo />
@@ -55,13 +55,13 @@ const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => {
         </Box>
         <Box
           sx={{
-            width: { xs: "100%", sm: "50%", lg: "60%" },
-            position: "relative",
+            width: { xs: '100%', sm: '50%', lg: '60%' },
+            position: 'relative',
             padding: { xs: 5, lg: 10 },
-            display: { xs: "none", sm: "flex" },
-            alignItems: { sm: "center" },
-            justifyContent: { sm: "center" },
-            flexDirection: { sm: "column" },
+            display: { xs: 'none', sm: 'flex' },
+            alignItems: { sm: 'center' },
+            justifyContent: { sm: 'center' },
+            flexDirection: { sm: 'column' },
             backgroundColor: (theme) => theme.palette.grey[900],
             color: (theme) => theme.palette.common.white,
             fontSize: 14,

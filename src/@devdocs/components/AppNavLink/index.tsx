@@ -1,5 +1,5 @@
-import React, { Ref } from "react";
-import Link from "next/link";
+import React, { Ref } from 'react';
+import Link from 'next/link';
 
 type AppNavLinkProps = {
   activeClassName: string;

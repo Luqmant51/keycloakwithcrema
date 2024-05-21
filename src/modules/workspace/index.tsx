@@ -1,32 +1,46 @@
 import { useState } from 'react';
-import WorkspaceCard from "../components/workspace";
+import WorkspaceCard from '../components/workspace';
 import { DevButton } from '../components/Button';
-
-type Workspace = {
-    type: 'public' | 'private';
-};
+import { WorkspaceType, UserType } from '../../../types/node-env';
+import { createMockWorkspace } from '@/fixtures/factory/workspace';
+import { useSession } from 'next-auth/react';
+import { createMockUser } from '@/fixtures/factory/user';
+import { faker } from '@faker-js/faker';
 
 const Workspace = () => {
-    const [publicWorkspaces, setPublicWorkspaces] = useState<Workspace[]>([{ type: 'public' }]);
+  const user = createMockUser({
+    id: '12345',
+    first_name: 'Muhammad',
+    last_name: 'Luqman',
+    email: 'luqmant51@gmail.com',
+    identity_id: faker.string.uuid(),
+  });
+  const { data: session } = useSession();
+  const userName = session ? session?.user?.name : user.first_name;
 
-    const addPublicWorkspace = () => {
-        setPublicWorkspaces([...publicWorkspaces, { type: 'public' }]);
-    };
+  const initialPrivateWorkspace: WorkspaceType = createMockWorkspace(userName!, false);
+  const initialPublicWorkspace: WorkspaceType = createMockWorkspace(userName!, true);
 
-    return (
-        <div>
-            <h1>Welcome to the Workspace</h1>
-            <h2>Private Workspace</h2>
-            <WorkspaceCard type="private" />
+  const [workspaces, setWorkspaces] = useState<WorkspaceType[]>([initialPrivateWorkspace, initialPublicWorkspace]);
 
-            <h2>Public Workspaces</h2>
-            {publicWorkspaces.map((workspace, index) => (
-                <WorkspaceCard key={index} type={workspace.type} />
-            ))}
+  const addPublicWorkspace = () => {
+    const newPublicWorkspace = createMockWorkspace(user.first_name, true);
+    setWorkspaces([...workspaces, newPublicWorkspace]);
+  };
 
-            <DevButton variant='contained' color='primary' label='Add Public Workspace' size='medium' onClick={addPublicWorkspace} />
-        </div>
-    );
+  return (
+    <div>
+      <h1>Welcome to the Dev Docs</h1>
+      <WorkspaceCard workspaces={workspaces} user={user} />
+      <DevButton
+        variant='contained'
+        color='primary'
+        label='Add Public Workspace'
+        size='medium'
+        onClick={addPublicWorkspace}
+      />
+    </div>
+  );
 };
 
 export default Workspace;

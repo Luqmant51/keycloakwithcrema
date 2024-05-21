@@ -64,6 +64,10 @@ export const authOptions: AuthOptions = {
             session.access_token = encrypt(token.access_token);
             session.id_token = encrypt(token.id_token);
             session.roles = token.decoded?.realm_access?.roles;
+            if (!session.user) {
+                session.user = {};
+            }
+            session.user.id = token.decoded?.sid;
             if (typeof token.error === 'string') {
                 session.error = token.error;
             }

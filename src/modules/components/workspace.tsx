@@ -1,7 +1,7 @@
 'use client';
 'use client';
 import React from 'react';
-import { Card, CardContent, Typography, Button, List, ListItem, ListItemText } from '@mui/material';
+import { Card, CardContent, Typography, List, ListItem, ListItemText } from '@mui/material';
 import { useSession } from 'next-auth/react';
 import { UserType, WorkspaceType, DocumentType } from '../../../types/node-env';
 import { createMockDocuments } from '@/fixtures/factory/document';

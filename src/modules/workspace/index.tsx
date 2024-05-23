@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import WorkspaceCard from '../components/workspace';
 import { DevButton } from '../components/Button';
-import { WorkspaceType, UserType } from '../../../types/node-env';
+import { WorkspaceType } from '../../../types/node-env';
 import { createMockWorkspace } from '@/fixtures/factory/workspace';
 import { useSession } from 'next-auth/react';
 import { createMockUser } from '@/fixtures/factory/user';

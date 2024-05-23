@@ -97,6 +97,13 @@ const NavBar = () => {
             style={{ fontSize: '32px', color: isScroll ? '#000' : '#fff' }}
             className='menu_icon'
             onClick={showDrawer}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                showDrawer();
+              }
+            }}
           >
             <MenuSharpIcon />
           </span>

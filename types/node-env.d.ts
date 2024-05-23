@@ -23,7 +23,7 @@ declare module 'next-auth/jwt' {
     }
 }
 
-declare module "next-auth" {
+declare module 'next-auth' {
     interface Session {
         access_token?: string;
         id_token?: string;
@@ -31,7 +31,7 @@ declare module "next-auth" {
         error?: string;
         user: {
             id?: string;
-        } & DefaultSession["user"];
+        } & DefaultSession['user'];
     }
 }
 export interface WorkspaceType {

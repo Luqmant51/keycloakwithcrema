@@ -2,7 +2,7 @@
   "bracketSpacing": true,
   "jsxSingleQuote": true,
   "singleQuote": true,
-  "endOfLine":"auto",
+  "endOfLine":"lf",
   "trailingComma": "all",
   "tabWidth": 2
 }

@@ -65,12 +65,12 @@ const InfoForm: React.FC<InfoFormProps> = ({ values, setFieldValue }) => {
                 sx={{ '& > img': { mr: 2, flexShrink: 0 } }}
                 {...props}
               >
-                <img
-                  loading='lazy'
-                  width='20'
+                <Image
+                  loading="lazy"
+                  width={20}
+                  height={14} // You need to specify a height
                   src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
-                  srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
-                  alt=''
+                  alt={`${option.code} flag`}
                 />
                 {option.label} ({option.code}) +{option.phone}
               </Box>

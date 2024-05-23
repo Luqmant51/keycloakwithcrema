@@ -13,7 +13,7 @@ const meta = {
 export default meta;
 
 export const InputAdornmentComponent: StoryObj<typeof InputAdornments> = {
-  render: (args) => {
+  render: () => {
     const inputConfigs: CustomInputProps[] = [
       { variant: 'outlined', label: 'With normal TextField', id: 'outlined-start-adornment', startAdornment: 'kg' },
       { variant: 'outlined', label: 'Weight', id: 'outlined-adornment-weight', endAdornment: 'kg', helperText: 'Weight' },

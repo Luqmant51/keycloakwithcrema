@@ -5,7 +5,7 @@ import Content from './Content';
 import { useSession } from 'next-auth/react';
 
 const Landing = () => {
-  const {data:session} = useSession()
+  const {data:session} = useSession();
   console.log(session);
   
   return (

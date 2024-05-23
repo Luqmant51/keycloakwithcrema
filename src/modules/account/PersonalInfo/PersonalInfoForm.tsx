@@ -82,21 +82,20 @@ const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
         }}
       >
         <AvatarViewWrapper {...getRootProps({ className: 'dropzone' })}>
-          <input {...getInputProps()} />
-          <label htmlFor="icon-button-file">
-            <Avatar
-              sx={{
-                width: { xs: 50, lg: 64 },
-                height: { xs: 50, lg: 64 },
-                cursor: 'pointer',
-              }}
-              src={values.photoURL}
-            />
-            <Box className="edit-icon">
-              <EditIcon />
-            </Box>
-          </label>
+          <input {...getInputProps()} id="icon-button-file" />
+          <Avatar
+            sx={{
+              width: { xs: 50, lg: 64 },
+              height: { xs: 50, lg: 64 },
+              cursor: 'pointer',
+            }}
+            src={values.photoURL}
+          />
+          <Box className="edit-icon">
+            <EditIcon />
+          </Box>
         </AvatarViewWrapper>
+
         <Box
           sx={{
             ml: 4,

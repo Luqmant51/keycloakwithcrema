@@ -15,7 +15,7 @@ export default {
 } as Meta;
 
 export const WorkSpacesStory: StoryObj<typeof WorkspaceCard> = {
-  render: (args) => {
+  render: () => {
     return (<>
       <PrimaryAppBar />
       <SessionProvider>

@@ -16,23 +16,16 @@ const meta: Meta<typeof PrimaryAppBar> = {
 export default meta;
 
 export const PrimaryAppBarStoryCloseMenu: StoryObj<typeof PrimaryAppBar> = {
-  render: (args) => (
+  render: () => (
     <div>
       <PrimaryAppBar />
     </div>
   ),
 };
 export const PrimaryAppBarStoryOpenMenu: StoryObj<typeof PrimaryAppBar> = {
-  render: (args) => (
+  render: () => (
     <div>
       <PrimaryAppBar open={true} />
     </div>
   ),
-};
-
-
-
-
-const data = () => {
-  return <></>;
 };

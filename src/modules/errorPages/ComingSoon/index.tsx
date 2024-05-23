@@ -15,7 +15,6 @@ import AppTextField from '@devdocs/components/AppFormComponents/AppTextField';
 import { styled } from '@mui/material/styles';
 import Logo from '../../../assets/icon/comingsoon.png';
 import Image from 'next/image';
-import { useTheme } from '@mui/material';
 import { useIntl } from 'react-intl';
 import { useInfoViewActionsContext } from '@devdocs/context/AppContextProvider/InfoViewContextProvider';
 
@@ -46,7 +45,6 @@ const validationSchema = yup.object({
 });
 
 const ComingSoon = () => {
-  const theme = useTheme();
   const infoViewActionsContext = useInfoViewActionsContext();
   const { messages } = useIntl();
   return (

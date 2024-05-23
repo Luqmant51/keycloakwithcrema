@@ -1,4 +1,3 @@
-import { faker } from '@faker-js/faker';
 import { UserGroupType } from '../../../types/node-env';
 
 export const createMockUserGroup = (userId: string, groupId: string, workspaceId: string, overwrites: Partial<UserGroupType> = {}): UserGroupType => ({
